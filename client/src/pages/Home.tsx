@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_LOGO, APP_SLOGAN, APP_TITLE, getLoginUrl } from "@/const";
-import { useAuth } from "@/_core/hooks/useAuth";
+import { useLocalAuth } from "@/hooks/useLocalAuth";
 import { useGeolocation } from "@/hooks/useGeolocation";
 import { 
   Home as HomeIcon, 
@@ -22,7 +22,7 @@ import {
 import { Link } from "wouter";
 
 export default function Home() {
-  const { user, isAuthenticated } = useAuth();
+  const { user, isAuthenticated } = useLocalAuth();
   const { city, loading: geoLoading } = useGeolocation();
 
   return (
@@ -51,14 +51,14 @@ export default function Home() {
               </>
             ) : (
               <>
-                <a href={getLoginUrl()}>
+                <Link href="/login">
                   <Button variant="ghost">Entrar</Button>
-                </a>
-                <a href={getLoginUrl()}>
+                </Link>
+                <Link href="/login">
                   <Button className="bg-gradient-to-r from-[#FF7A00] to-[#FF2E63] hover:opacity-90">
                     Cadastrar
                   </Button>
-                </a>
+                </Link>
               </>
             )}
           </nav>

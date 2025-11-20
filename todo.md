@@ -188,3 +188,16 @@
 | 11 | Rancho Pedra Alta | São Bento do Sapucaí, SP | 2 | R$ 481 |
 
 **Total**: 11 propriedades | 32 fotos | Preço médio: R$ 470/noite
+
+
+## 🔄 NOVA ABORDAGEM - Sistema sem Banco de Dados (localStorage)
+
+- [x] Criar arquivo JSON com dados das 11 chácaras (fixo no código)
+- [x] Implementar autenticação com localStorage (cadastro/login/logout)
+- [x] Criar página /properties com listagem das 11 chácaras
+- [x] Criar 11 páginas individuais /property/[id]
+- [x] Implementar sistema de reservas com localStorage
+- [x] Criar interface de pagamento (preparada para integração futura REAL)
+- [x] Criar painel "Minhas Reservas"
+- [x] Testar fluxo completo de usuário
+- [ ] Salvar checkpoint final

@@ -10,6 +10,7 @@ import Properties from "./pages/Properties";
 import PropertyDetail from "./pages/PropertyDetail";
 import Dashboard from "./pages/Dashboard";
 import OwnerDashboard from "./pages/OwnerDashboard";
+import Login from "./pages/Login";
 
 function Router() {
   return (
@@ -19,6 +20,7 @@ function Router() {
       <Route path={"/properties"} component={Properties} />
       <Route path={"/property/:id"} component={PropertyDetail} />
       <Route path={"/dashboard"} component={Dashboard} />
+      <Route path={"/login"} component={Login} />
       <Route path={"/owner/properties"} component={OwnerDashboard} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
