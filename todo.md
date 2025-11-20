@@ -130,4 +130,10 @@
 
 ## 🎨 Ajuste Visual Slogan
 - [x] Separar título e slogan em duas linhas
+- [x] Fazer push para GitHub
+
+## 📸 Seção de Fotos de Chácaras
+- [x] Copiar imagens para client/public
+- [x] Adicionar seção com 3 fotos entre Hero e Como Funciona
+- [x] Criar badges "Disponível para Natal/Réveillon/Carnaval"
 - [ ] Fazer push para GitHub

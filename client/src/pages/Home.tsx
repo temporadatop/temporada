@@ -107,6 +107,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Destaques - Fotos de Chácaras */}
+      <section className="py-16 bg-white">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-[#FF7A00] via-[#FF2E63] to-[#D400FF] bg-clip-text text-transparent">
+              Imóveis em Destaque
+            </h2>
+            <p className="text-lg text-gray-600">
+              Reserve agora para as melhores datas do ano
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Chácara Natal */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/chacara-natal.jpg" 
+                  alt="Chácara disponível para o Natal" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="absolute top-4 left-4">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-red-500 to-green-600 text-white font-bold text-sm rounded-full shadow-lg">
+                  <Sparkles className="h-4 w-4" />
+                  Disponível para o Natal
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            {/* Chácara Réveillon */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/chacara-reveillon.jpg" 
+                  alt="Chácara disponível para o Réveillon" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="absolute top-4 left-4">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#FF7A00] to-[#FF2E63] text-white font-bold text-sm rounded-full shadow-lg">
+                  <Sparkles className="h-4 w-4" />
+                  Disponível Réveillon
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+
+            {/* Chácara Carnaval */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/chacara-carnaval.jpg" 
+                  alt="Chácara disponível para o Carnaval" 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="absolute top-4 left-4">
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#FF2E63] to-[#D400FF] text-white font-bold text-sm rounded-full shadow-lg">
+                  <Sparkles className="h-4 w-4" />
+                  Disponível Carnaval
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Como Funciona */}
       <section className="py-20 bg-gray-50">
         <div className="container">
