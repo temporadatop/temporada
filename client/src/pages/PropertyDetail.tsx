@@ -298,9 +298,24 @@ export default function PropertyDetail() {
                         </div>
                       </div>
                     )}
-                    <div className="flex justify-between">
-                      <span>Total da estadia</span>
-                      <span className="font-semibold">{formatPrice(totalPrice)}</span>
+                    <div className="space-y-1">
+                      {user && canUseFirstBookingCoupon(user.id) ? (
+                        <>
+                          <div className="flex justify-between items-center">
+                            <span>Total da estadia</span>
+                            <span className="line-through text-red-500 text-sm">{formatPrice(totalPrice)}</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="font-bold text-green-600">Com 50% OFF</span>
+                            <span className="font-bold text-green-600 text-lg">{formatPrice(totalPrice * 0.5)}</span>
+                          </div>
+                        </>
+                      ) : (
+                        <div className="flex justify-between">
+                          <span>Total da estadia</span>
+                          <span className="font-semibold">{formatPrice(totalPrice)}</span>
+                        </div>
+                      )}
                     </div>
                     <div className="flex justify-between text-sm text-gray-600">
                       <span>Taxa de reserva</span>

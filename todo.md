@@ -257,3 +257,7 @@
 - [x] Exibir valor original e valor com desconto
 - [x] Salvar informação de cupom usado no localStorage
 - [ ] Testar fluxo completo: login → modal → reserva com desconto
+
+- [x] Mostrar valor original riscado em vermelho quando cupom está ativo
+- [x] Exibir valor com desconto em destaque abaixo do valor original
+- [x] Melhorar visualização do desconto na página de reserva
