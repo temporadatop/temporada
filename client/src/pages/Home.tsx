@@ -13,7 +13,10 @@ import {
   CreditCard,
   Users,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Search,
+  Key,
+  ThumbsUp
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -66,131 +69,173 @@ export default function Home() {
         
         <div className="container relative">
           <div className="flex flex-col items-center text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-white backdrop-blur-sm">
+            {/* Logo grande acima do slogan */}
+            <img src={APP_LOGO} alt={APP_TITLE} className="h-32 w-32 mb-8 drop-shadow-2xl" />
+            
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-white backdrop-blur-sm">
               <Sparkles className="h-4 w-4" />
               <span className="text-sm font-semibold">Plataforma de Aluguel de Temporada</span>
             </div>
             
-            <h1 className="mb-6 text-4xl font-black text-white md:text-6xl lg:text-7xl drop-shadow-lg">
+            <h1 className="mb-4 text-3xl font-black text-white md:text-4xl lg:text-5xl drop-shadow-lg">
               {APP_SLOGAN}
             </h1>
             
             <p className="mb-10 max-w-2xl text-lg text-white/90 md:text-xl font-medium">
               Encontre a chácara ou casa perfeita para suas férias, feriados e eventos especiais. 
-              Reserve com segurança pagando apenas 10% do valor total.
+              Reserve com segurança e praticidade.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={isAuthenticated ? "/properties" : getLoginUrl()}>
-                <Button size="lg" className="bg-white text-[#FF2E63] hover:bg-white/90 font-bold text-lg px-8 py-6 shadow-2xl">
-                  <MapPin className="mr-2 h-5 w-5" />
+              <Link href="/properties">
+                <Button size="lg" className="bg-white text-[#FF2E63] hover:bg-white/90 font-bold text-lg px-8 py-6 shadow-xl">
+                  <Search className="mr-2 h-5 w-5" />
                   Quero Alugar Temporada
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-              </a>
-              
-              <a href={isAuthenticated ? "/owner/properties" : getLoginUrl()}>
-                <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 font-bold text-lg px-8 py-6 backdrop-blur-sm shadow-2xl">
+              </Link>
+              <Link href="/owner-dashboard">
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6 shadow-xl">
                   <HomeIcon className="mr-2 h-5 w-5" />
                   Cadastrar Meu Imóvel
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Como Funciona */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#FF7A00] via-[#FF2E63] to-[#D400FF] bg-clip-text text-transparent">
               Como Funciona
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600">
               Processo simples e seguro para locatários e proprietários
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12">
             {/* Para Locatários */}
             <Card className="border-2 border-[#FF7A00]/20 shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-[#FF7A00] flex items-center gap-2">
-                  <Users className="h-6 w-6" />
-                  Para Locatários
-                </CardTitle>
-                <CardDescription className="text-base">Alugue com segurança e praticidade</CardDescription>
+              <CardHeader className="bg-gradient-to-r from-[#FF7A00]/10 to-[#FF2E63]/10">
+                <div className="flex items-center gap-3 mb-2">
+                  <Users className="h-8 w-8 text-[#FF7A00]" />
+                  <CardTitle className="text-2xl">Para Locatários</CardTitle>
+                </div>
+                <CardDescription className="text-base">
+                  Alugue com segurança e praticidade
+                </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-[#FF7A00] flex-shrink-0 mt-1" />
+              <CardContent className="pt-6 space-y-6">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#FF2E63] flex items-center justify-center text-white font-bold">
+                    1
+                  </div>
                   <div>
-                    <p className="font-semibold">1. Busque e Escolha</p>
-                    <p className="text-sm text-gray-600">Encontre o imóvel perfeito por região, capacidade e comodidades</p>
+                    <h3 className="font-bold text-lg mb-1">Busque e Escolha</h3>
+                    <p className="text-gray-600">
+                      Encontre o imóvel perfeito por região, capacidade e comodidades
+                    </p>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-[#FF2E63] flex-shrink-0 mt-1" />
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#FF2E63] flex items-center justify-center text-white font-bold">
+                    2
+                  </div>
                   <div>
-                    <p className="font-semibold">2. Reserve Pagando 10%</p>
-                    <p className="text-sm text-gray-600">Garanta sua reserva com apenas 10% do valor total</p>
+                    <h3 className="font-bold text-lg mb-1">Reserve com Segurança</h3>
+                    <p className="text-gray-600">
+                      Garanta sua reserva de forma rápida e segura
+                    </p>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-[#D400FF] flex-shrink-0 mt-1" />
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#FF2E63] flex items-center justify-center text-white font-bold">
+                    3
+                  </div>
                   <div>
-                    <p className="font-semibold">3. Pague o Restante no Check-in</p>
-                    <p className="text-sm text-gray-600">Complete o pagamento ao chegar no imóvel</p>
+                    <h3 className="font-bold text-lg mb-1">Aproveite sua Estadia</h3>
+                    <p className="text-gray-600">
+                      Faça check-in e aproveite momentos inesquecíveis
+                    </p>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-[#FF7A00] flex-shrink-0 mt-1" />
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#FF2E63] flex items-center justify-center text-white font-bold">
+                    4
+                  </div>
                   <div>
-                    <p className="font-semibold">4. Receba os 10% de Volta</p>
-                    <p className="text-sm text-gray-600">Após o check-out, os 10% são devolvidos automaticamente</p>
+                    <h3 className="font-bold text-lg mb-1">Avalie sua Experiência</h3>
+                    <p className="text-gray-600">
+                      Compartilhe sua opinião e ajude outros locatários
+                    </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Para Proprietários */}
-            <Card className="border-2 border-[#FF2E63]/20 shadow-lg hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-[#FF2E63] flex items-center gap-2">
-                  <HomeIcon className="h-6 w-6" />
-                  Para Proprietários
-                </CardTitle>
-                <CardDescription className="text-base">Anuncie e lucre com seu imóvel</CardDescription>
+            <Card className="border-2 border-[#D400FF]/20 shadow-lg hover:shadow-xl transition-shadow">
+              <CardHeader className="bg-gradient-to-r from-[#FF2E63]/10 to-[#D400FF]/10">
+                <div className="flex items-center gap-3 mb-2">
+                  <HomeIcon className="h-8 w-8 text-[#D400FF]" />
+                  <CardTitle className="text-2xl">Para Proprietários</CardTitle>
+                </div>
+                <CardDescription className="text-base">
+                  Anuncie e lucre com seu imóvel
+                </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-[#FF7A00] flex-shrink-0 mt-1" />
+              <CardContent className="pt-6 space-y-6">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#FF2E63] to-[#D400FF] flex items-center justify-center text-white font-bold">
+                    1
+                  </div>
                   <div>
-                    <p className="font-semibold">1. Pague R$ 299,99 (Único)</p>
-                    <p className="text-sm text-gray-600">Taxa vitalícia para cadastrar seu imóvel na plataforma</p>
+                    <h3 className="font-bold text-lg mb-1">Cadastre-se na Plataforma</h3>
+                    <p className="text-gray-600">
+                      Crie sua conta e tenha acesso ao painel de proprietário
+                    </p>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-[#FF2E63] flex-shrink-0 mt-1" />
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#FF2E63] to-[#D400FF] flex items-center justify-center text-white font-bold">
+                    2
+                  </div>
                   <div>
-                    <p className="font-semibold">2. Cadastre Seu Imóvel</p>
-                    <p className="text-sm text-gray-600">Adicione fotos, descrição, regras e comodidades</p>
+                    <h3 className="font-bold text-lg mb-1">Cadastre Seu Imóvel</h3>
+                    <p className="text-gray-600">
+                      Adicione fotos, descrição, regras e comodidades
+                    </p>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-[#D400FF] flex-shrink-0 mt-1" />
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#FF2E63] to-[#D400FF] flex items-center justify-center text-white font-bold">
+                    3
+                  </div>
                   <div>
-                    <p className="font-semibold">3. Receba Reservas</p>
-                    <p className="text-sm text-gray-600">Seja notificado quando alguém reservar seu imóvel</p>
+                    <h3 className="font-bold text-lg mb-1">Receba Reservas</h3>
+                    <p className="text-gray-600">
+                      Seja notificado quando alguém reservar seu imóvel
+                    </p>
                   </div>
                 </div>
-                <div className="flex gap-3">
-                  <CheckCircle className="h-6 w-6 text-[#FF7A00] flex-shrink-0 mt-1" />
+
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-r from-[#FF2E63] to-[#D400FF] flex items-center justify-center text-white font-bold">
+                    4
+                  </div>
                   <div>
-                    <p className="font-semibold">4. Receba o Pagamento Total</p>
-                    <p className="text-sm text-gray-600">Valor integral creditado no dia do check-in</p>
+                    <h3 className="font-bold text-lg mb-1">Gerencie com Facilidade</h3>
+                    <p className="text-gray-600">
+                      Controle reservas, calendário e receba pagamentos
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -199,36 +244,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Benefícios */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Por Que Escolher */}
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#FF7A00] via-[#FF2E63] to-[#D400FF] bg-clip-text text-transparent">
               Por Que Escolher o TemporadaTop?
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="text-center shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#FF7A00]">
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="text-center border-2 hover:border-[#FF7A00] transition-colors shadow-lg">
               <CardHeader>
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#FF7A00] to-[#FF2E63]">
+                <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-r from-[#FF7A00] to-[#FF2E63] flex items-center justify-center mb-4">
                   <Shield className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold">Segurança Garantida</CardTitle>
+                <CardTitle className="text-xl">Segurança Garantida</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Sistema de pagamento seguro com retenção dos 10% até o check-out confirmado
+                  Sistema de pagamento seguro com retenção e confirmação de check-out
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="text-center shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#FF2E63]">
+            <Card className="text-center border-2 hover:border-[#FF2E63] transition-colors shadow-lg">
               <CardHeader>
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#FF2E63] to-[#D400FF]">
+                <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-r from-[#FF2E63] to-[#D400FF] flex items-center justify-center mb-4">
                   <Clock className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold">Processo Rápido</CardTitle>
+                <CardTitle className="text-xl">Processo Rápido</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
@@ -237,12 +282,12 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="text-center shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#D400FF]">
+            <Card className="text-center border-2 hover:border-[#D400FF] transition-colors shadow-lg">
               <CardHeader>
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-[#D400FF] to-[#FF7A00]">
+                <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-r from-[#D400FF] to-[#FF7A00] flex items-center justify-center mb-4">
                   <Star className="h-8 w-8 text-white" />
                 </div>
-                <CardTitle className="text-xl font-bold">Avaliações Reais</CardTitle>
+                <CardTitle className="text-xl">Avaliações Reais</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
@@ -255,66 +300,58 @@ export default function Home() {
       </section>
 
       {/* CTA Final */}
-      <section className="py-20 bg-gradient-to-r from-[#FF7A00] via-[#FF2E63] to-[#D400FF]">
+      <section className="py-20 bg-gradient-to-r from-[#FF7A00] via-[#FF2E63] to-[#D400FF] text-white">
         <div className="container text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold mb-6">
             Pronto Para Começar?
           </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-10 max-w-2xl mx-auto">
             Junte-se a milhares de pessoas que já estão aproveitando suas temporadas com segurança e praticidade
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={isAuthenticated ? "/properties" : getLoginUrl()}>
-              <Button size="lg" className="bg-white text-[#FF2E63] hover:bg-white/90 font-bold text-lg px-8 py-6 shadow-2xl">
-                Buscar Imóveis Agora
-              </Button>
-            </a>
-          </div>
+          <Link href="/properties">
+            <Button size="lg" className="bg-white text-[#FF2E63] hover:bg-white/90 font-bold text-xl px-10 py-7 shadow-2xl">
+              Buscar Imóveis Agora
+              <ArrowRight className="ml-2 h-6 w-6" />
+            </Button>
+          </Link>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <img src={APP_LOGO} alt={APP_TITLE} className="h-8 w-8" />
+              <div className="flex items-center gap-3 mb-4">
+                <img src={APP_LOGO} alt={APP_TITLE} className="h-10 w-10" />
                 <span className="text-xl font-bold">{APP_TITLE}</span>
               </div>
-              <p className="text-gray-400 text-sm">{APP_SLOGAN}</p>
+              <p className="text-gray-400">
+                {APP_SLOGAN}
+              </p>
             </div>
-            
+
             <div>
-              <h3 className="font-bold mb-4">Para Você</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white">Buscar Imóveis</a></li>
-                <li><a href="#" className="hover:text-white">Como Funciona</a></li>
-                <li><a href="#" className="hover:text-white">Minhas Reservas</a></li>
+              <h3 className="font-bold text-lg mb-4">Para Você</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/properties" className="hover:text-white transition-colors">Buscar Imóveis</Link></li>
+                <li><Link href="/dashboard" className="hover:text-white transition-colors">Como Funciona</Link></li>
+                <li><Link href="/dashboard" className="hover:text-white transition-colors">Minhas Reservas</Link></li>
               </ul>
             </div>
-            
+
             <div>
-              <h3 className="font-bold mb-4">Para Proprietários</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white">Cadastrar Imóvel</a></li>
-                <li><a href="#" className="hover:text-white">Gerenciar Anúncios</a></li>
-                <li><a href="#" className="hover:text-white">Central de Ajuda</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-bold mb-4">Legal</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><a href="#" className="hover:text-white">Termos de Uso</a></li>
-                <li><a href="#" className="hover:text-white">Política de Privacidade</a></li>
-                <li><a href="#" className="hover:text-white">Contato</a></li>
+              <h3 className="font-bold text-lg mb-4">Para Proprietários</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/owner-dashboard" className="hover:text-white transition-colors">Cadastrar Imóvel</Link></li>
+                <li><Link href="/owner-dashboard" className="hover:text-white transition-colors">Gerenciar Anúncios</Link></li>
+                <li><Link href="/owner-dashboard" className="hover:text-white transition-colors">Central de Ajuda</Link></li>
               </ul>
             </div>
           </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 {APP_TITLE}. Todos os direitos reservados.</p>
+
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 TemporadaTop. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>

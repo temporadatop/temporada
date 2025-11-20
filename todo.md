@@ -118,5 +118,12 @@
 - [x] Fazer push para GitHub
 
 ## 🔧 Correção Deploy Render
-- [ ] Alterar comando db:push para usar apenas drizzle-kit push
+- [x] Alterar comando db:push para usar apenas drizzle-kit push
+- [x] Fazer push para GitHub
+
+## 🎨 Melhorias Landing Page
+- [x] Adicionar logo acima do slogan
+- [x] Diminuir tamanho do slogan
+- [x] Remover menções aos 10% e R$ 299,99
+- [x] Focar em benefícios sem falar de valores
 - [ ] Fazer push para GitHub
