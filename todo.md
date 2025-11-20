@@ -201,3 +201,28 @@
 - [x] Criar painel "Minhas Reservas"
 - [x] Testar fluxo completo de usuário
 - [ ] Salvar checkpoint final
+
+
+## 🔄 Ajustes Finais Deploy
+
+- [ ] Fazer push do código atualizado para GitHub
+- [ ] Fazer deploy no Render com commit correto
+- [ ] Redirecionar automaticamente para /properties após login/cadastro
+- [ ] Testar fluxo completo no Render
+
+
+## 🎯 Simplificação UX - Foco em Aluguel
+
+- [x] Desativar botão "Cadastrar Imóvel" na landing page
+- [x] Manter apenas botão "Alugar" funcionando
+- [x] Redirecionar automaticamente para /properties após login/cadastro
+- [x] Testar fluxo completo: cadastro → login → /properties
+- [ ] Fazer push para GitHub
+- [ ] Deploy no Render
+
+
+## 🎯 Ajuste Final do Fluxo UX
+
+- [x] Todos os botões da landing page devem redirecionar para /login
+- [x] Após login/cadastro bem-sucedido → redirecionar para /properties
+- [x] Usuário só vê as chácaras disponíveis após fazer login/cadastro

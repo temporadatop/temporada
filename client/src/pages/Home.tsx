@@ -89,18 +89,21 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/properties">
+              <Link href="/login">
                 <Button size="lg" className="bg-white text-[#FF2E63] hover:bg-white/90 font-bold text-lg px-8 py-6 shadow-xl">
                   <Search className="mr-2 h-5 w-5" />
                   Quero Alugar Temporada
                 </Button>
               </Link>
-              <Link href="/owner-dashboard">
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6 shadow-xl">
-                  <HomeIcon className="mr-2 h-5 w-5" />
-                  Cadastrar Meu Imóvel
-                </Button>
-              </Link>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-white text-white/50 font-bold text-lg px-8 py-6 shadow-xl cursor-not-allowed" 
+                disabled
+              >
+                <HomeIcon className="mr-2 h-5 w-5" />
+                Cadastrar Meu Imóvel
+              </Button>
             </div>
           </div>
         </div>
@@ -380,7 +383,7 @@ export default function Home() {
           <p className="text-xl mb-10 max-w-2xl mx-auto">
             Junte-se a milhares de pessoas que já estão aproveitando suas temporadas com segurança e praticidade
           </p>
-          <Link href="/properties">
+          <Link href="/login">
             <Button size="lg" className="bg-white text-[#FF2E63] hover:bg-white/90 font-bold text-xl px-10 py-7 shadow-2xl">
               Buscar Imóveis Agora
               <ArrowRight className="ml-2 h-6 w-6" />
@@ -406,18 +409,18 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Para Você</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/properties" className="hover:text-white transition-colors">Buscar Imóveis</Link></li>
-                <li><Link href="/dashboard" className="hover:text-white transition-colors">Como Funciona</Link></li>
-                <li><Link href="/dashboard" className="hover:text-white transition-colors">Minhas Reservas</Link></li>
+                <li><Link href="/login" className="hover:text-white transition-colors">Buscar Imóveis</Link></li>
+                <li><Link href="/login" className="hover:text-white transition-colors">Como Funciona</Link></li>
+                <li><Link href="/login" className="hover:text-white transition-colors">Minhas Reservas</Link></li>
               </ul>
             </div>
 
             <div>
               <h3 className="font-bold text-lg mb-4">Para Proprietários</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/owner-dashboard" className="hover:text-white transition-colors">Cadastrar Imóvel</Link></li>
-                <li><Link href="/owner-dashboard" className="hover:text-white transition-colors">Gerenciar Anúncios</Link></li>
-                <li><Link href="/owner-dashboard" className="hover:text-white transition-colors">Central de Ajuda</Link></li>
+                <li><Link href="/login" className="hover:text-white transition-colors">Cadastrar Imóvel</Link></li>
+                <li><Link href="/login" className="hover:text-white transition-colors">Gerenciar Anúncios</Link></li>
+                <li><Link href="/login" className="hover:text-white transition-colors">Central de Ajuda</Link></li>
               </ul>
             </div>
           </div>
