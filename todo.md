@@ -136,4 +136,4 @@
 - [x] Copiar imagens para client/public
 - [x] Adicionar seção com 3 fotos entre Hero e Como Funciona
 - [x] Criar badges "Disponível para Natal/Réveillon/Carnaval"
-- [ ] Fazer push para GitHub
+- [x] Fazer push para GitHub
