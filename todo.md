@@ -226,3 +226,19 @@
 - [x] Todos os botões da landing page devem redirecionar para /login
 - [x] Após login/cadastro bem-sucedido → redirecionar para /properties
 - [x] Usuário só vê as chácaras disponíveis após fazer login/cadastro
+
+
+## 🐛 Correções Solicitadas
+
+- [x] Corrigir geolocalização na página /properties (não estava detectando cidade do usuário)
+- [x] Verificar se hook useGeolocation está funcionando corretamente
+- [x] Testar detecção de IP e exibição da cidade
+
+-- [x] Verificar quais chácaras estão sem fotos
+- [x] Adicionar fotos reais para todas as 11 chácaras
+- [x] Testar exibição das fotos na página /properties
+- [x] Mudar lógica de pagamento: remover depósito de 10%
+- [x] Implementar taxa única de reserva de R$ 79,90
+- [x] Atualizar textos explicando que a taxa é devolvida no dia da reserva
+- [x] Ajustar cálculos na página de pagamento
+- [ ] Testar fluxo completo de reserva com nova taxa

@@ -8,8 +8,10 @@ import { MapPin, Users, Bed, Bath, Star } from "lucide-react";
 import { Link } from "wouter";
 import { APP_LOGO, APP_TITLE } from "@/const";
 import { properties } from "@/data/properties";
+import { useGeolocation } from "@/hooks/useGeolocation";
 
 export default function Properties() {
+  const { city, loading: geoLoading } = useGeolocation();
   const [filters, setFilters] = useState({
     city: "",
     minCapacity: undefined as number | undefined,
@@ -125,7 +127,9 @@ export default function Properties() {
 
         {/* Lista de Propriedades */}
         <div className="mb-6">
-          <h2 className="text-2xl font-bold mb-2">Imóveis Disponíveis</h2>
+          <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+            Imóveis Disponíveis{city && ` próximo da Região de ${city}`}
+          </h2>
           <p className="text-gray-600">{filteredProperties.length} imóveis encontrados</p>
         </div>
 

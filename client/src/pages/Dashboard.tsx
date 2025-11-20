@@ -192,16 +192,19 @@ export default function Dashboard() {
                               <span className="font-bold text-[#FF7A00]">{formatPrice(booking.totalAmount)}</span>
                             </div>
                             <div className="flex justify-between text-sm">
-                              <span>Depósito (10%):</span>
+                              <span>Taxa de reserva:</span>
                               <span className="font-semibold">{formatPrice(booking.depositAmount)}</span>
                             </div>
                             <div className="flex items-center gap-2 text-xs text-gray-600 mt-2">
                               {booking.depositPaid ? (
-                                <><CheckCircle className="h-3 w-3 text-green-500" /> Depósito pago</>
+                                <><CheckCircle className="h-3 w-3 text-green-500" /> Taxa paga (será devolvida no dia)</>
                               ) : (
                                 <><Clock className="h-3 w-3 text-orange-500" /> Aguardando pagamento</>
                               )}
                             </div>
+                            <p className="text-xs text-gray-500 mt-1">
+                              * Taxa devolvida no dia da reserva
+                            </p>
                           </div>
 
                           <div className="grid grid-cols-2 gap-2 text-xs">

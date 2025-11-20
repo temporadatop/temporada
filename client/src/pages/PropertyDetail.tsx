@@ -77,7 +77,7 @@ export default function PropertyDetail() {
     }
 
     const totalPrice = calculateTotalPrice();
-    const depositAmount = totalPrice * 0.1; // 10% de depósito
+    const depositAmount = 79.90; // Taxa única de reserva
 
     const result = createBooking({
       userId: user.id,
@@ -93,7 +93,7 @@ export default function PropertyDetail() {
 
     if (result.success) {
       toast.success("Reserva criada com sucesso!");
-      toast.info(`Valor do depósito (10%): ${formatPrice(depositAmount)}`);
+      toast.info(`Taxa de reserva: ${formatPrice(depositAmount)} (devolvida no dia da reserva)`);
       setLocation("/dashboard");
     } else {
       toast.error(result.error || "Erro ao criar reserva");
@@ -273,9 +273,12 @@ export default function PropertyDetail() {
                       <span className="font-semibold">{formatPrice(totalPrice)}</span>
                     </div>
                     <div className="flex justify-between text-sm text-gray-600">
-                      <span>Depósito (10%)</span>
+                      <span>Taxa de reserva</span>
                       <span>{formatPrice(depositAmount)}</span>
                     </div>
+                    <p className="text-xs text-gray-500 mt-2">
+                      * A taxa de reserva será devolvida no dia da reserva
+                    </p>
                   </div>
                 )}
 
