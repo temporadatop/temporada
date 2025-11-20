@@ -1,22 +1,53 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { MapPin, Users, Bed, Bath, Star } from "lucide-react";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { MapPin, Users, Bed, Bath, Star, Gift, Copy, Check } from "lucide-react";
 import { Link } from "wouter";
 import { APP_LOGO, APP_TITLE } from "@/const";
 import { properties } from "@/data/properties";
 import { useGeolocation } from "@/hooks/useGeolocation";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { toast } from "sonner";
 
 export default function Properties() {
+  const { user } = useAuth();
   const { city, loading: geoLoading } = useGeolocation();
   const [filters, setFilters] = useState({
     city: "",
     minCapacity: undefined as number | undefined,
     maxPrice: undefined as number | undefined,
   });
+  
+  // Estado do modal de cupom
+  const [showCouponModal, setShowCouponModal] = useState(false);
+  const [copiedCoupon, setCopiedCoupon] = useState(false);
+  
+  // Verificar se é a primeira vez do usuário e se já viu o modal
+  useEffect(() => {
+    if (user) {
+      const hasSeenCoupon = localStorage.getItem('hasSeenWelcomeCoupon');
+      if (!hasSeenCoupon) {
+        // Mostrar modal após 1 segundo
+        const timer = setTimeout(() => {
+          setShowCouponModal(true);
+          localStorage.setItem('hasSeenWelcomeCoupon', 'true');
+        }, 1000);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [user]);
+  
+  // Copiar cupom
+  const copyCoupon = () => {
+    navigator.clipboard.writeText('#temporadatop');
+    setCopiedCoupon(true);
+    toast.success('Cupom copiado!');
+    setTimeout(() => setCopiedCoupon(false), 2000);
+  };
 
   // Filtrar propriedades
   const filteredProperties = properties.filter(property => {
@@ -214,6 +245,69 @@ export default function Properties() {
           </div>
         )}
       </main>
+      
+      {/* Modal de Cupom de Boas-Vindas */}
+      <Dialog open={showCouponModal} onOpenChange={setShowCouponModal}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <div className="flex justify-center mb-4">
+              <div className="bg-gradient-to-r from-orange-500 to-pink-500 p-4 rounded-full">
+                <Gift className="h-12 w-12 text-white" />
+              </div>
+            </div>
+            <DialogTitle className="text-center text-2xl">
+              🎉 Bem-vindo ao TemporadaTop!
+            </DialogTitle>
+            <DialogDescription className="text-center text-base mt-2">
+              Aproveite seu <span className="font-bold text-orange-600">primeiro aluguel</span> com desconto especial!
+            </DialogDescription>
+          </DialogHeader>
+          
+          <div className="space-y-4 py-4">
+            <div className="bg-gradient-to-r from-orange-50 to-pink-50 p-6 rounded-lg border-2 border-dashed border-orange-300">
+              <div className="text-center space-y-2">
+                <p className="text-sm text-gray-600">Seu cupom de desconto:</p>
+                <div className="flex items-center justify-center gap-2">
+                  <code className="text-2xl font-bold bg-white px-4 py-2 rounded border-2 border-orange-400 text-orange-600">
+                    #temporadatop
+                  </code>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    onClick={copyCoupon}
+                    className="border-orange-400 hover:bg-orange-50"
+                  >
+                    {copiedCoupon ? (
+                      <Check className="h-4 w-4 text-green-600" />
+                    ) : (
+                      <Copy className="h-4 w-4 text-orange-600" />
+                    )}
+                  </Button>
+                </div>
+                <p className="text-3xl font-bold text-orange-600 mt-3">
+                  50% OFF
+                </p>
+                <p className="text-sm text-gray-600">
+                  no valor total da sua primeira reserva!
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+              <p className="text-sm text-blue-800">
+                ℹ️ <strong>Como usar:</strong> O cupom será aplicado automaticamente na sua primeira reserva. Escolha sua chácara favorita e aproveite!
+              </p>
+            </div>
+          </div>
+          
+          <Button
+            className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600"
+            onClick={() => setShowCouponModal(false)}
+          >
+            Explorar Chácaras
+          </Button>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

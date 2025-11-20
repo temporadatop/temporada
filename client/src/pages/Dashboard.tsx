@@ -187,6 +187,20 @@ export default function Dashboard() {
                           </div>
 
                           <div className="bg-gray-50 p-3 rounded-lg space-y-1">
+                            {(booking as any).couponCode && (booking as any).originalPrice && (booking as any).discount && (
+                              <div className="bg-gradient-to-r from-orange-50 to-pink-50 p-2 rounded border border-orange-200 mb-2">
+                                <div className="flex items-center gap-2 text-xs">
+                                  <span>🎉</span>
+                                  <div>
+                                    <p className="font-bold text-orange-600">Cupom {(booking as any).couponCode} aplicado!</p>
+                                    <div className="flex items-center gap-2">
+                                      <span className="line-through text-gray-500">{formatPrice((booking as any).originalPrice)}</span>
+                                      <span className="text-green-600 font-bold">-{formatPrice((booking as any).discount)}</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
                             <div className="flex justify-between text-sm">
                               <span>Valor Total:</span>
                               <span className="font-bold text-[#FF7A00]">{formatPrice(booking.totalAmount)}</span>

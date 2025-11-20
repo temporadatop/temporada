@@ -9,6 +9,9 @@ export interface Booking {
   checkOut: string;
   guests: number;
   totalPrice: number;
+  originalPrice?: number; // Preço original antes do desconto
+  couponCode?: string; // Código do cupom usado
+  discount?: number; // Valor do desconto aplicado
   depositPaid: boolean;
   depositAmount: number;
   status: 'pending' | 'confirmed' | 'cancelled';
@@ -128,4 +131,40 @@ export function checkAvailability(propertyId: number, checkIn: string, checkOut:
     (checkOut > b.checkIn && checkOut <= b.checkOut) ||
     (checkIn <= b.checkIn && checkOut >= b.checkOut)
   );
+}
+
+// Verificar se usuário tem direito ao cupom de primeira reserva
+export function canUseFirstBookingCoupon(userId: string): boolean {
+  const userBookings = getUserBookings(userId);
+  // Usuário pode usar o cupom se não tiver nenhuma reserva confirmada ou pendente
+  return userBookings.filter(b => b.status !== 'cancelled').length === 0;
+}
+
+// Aplicar cupom de desconto
+export function applyCoupon(couponCode: string, totalPrice: number, userId: string): { valid: boolean; discount: number; finalPrice: number; message?: string } {
+  if (couponCode.toLowerCase() === '#temporadatop') {
+    if (!canUseFirstBookingCoupon(userId)) {
+      return {
+        valid: false,
+        discount: 0,
+        finalPrice: totalPrice,
+        message: 'Este cupom é válido apenas para a primeira reserva'
+      };
+    }
+    
+    const discount = totalPrice * 0.5; // 50% de desconto
+    return {
+      valid: true,
+      discount,
+      finalPrice: totalPrice - discount,
+      message: 'Cupom aplicado! 50% de desconto na sua primeira reserva'
+    };
+  }
+  
+  return {
+    valid: false,
+    discount: 0,
+    finalPrice: totalPrice,
+    message: 'Cupom inválido'
+  };
 }

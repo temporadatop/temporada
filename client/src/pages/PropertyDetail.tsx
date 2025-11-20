@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { useLocalAuth } from "@/hooks/useLocalAuth";
 import { APP_LOGO, APP_TITLE } from "@/const";
 import { properties } from "@/data/properties";
-import { createBooking, checkAvailability } from "@/lib/bookings";
+import { createBooking, checkAvailability, canUseFirstBookingCoupon, applyCoupon } from "@/lib/bookings";
 import { 
   MapPin, Users, Bed, Bath, Star, Calendar, 
   ArrowLeft, CheckCircle
@@ -76,8 +76,24 @@ export default function PropertyDetail() {
       return;
     }
 
-    const totalPrice = calculateTotalPrice();
+    let totalPrice = calculateTotalPrice();
     const depositAmount = 79.90; // Taxa única de reserva
+    
+    // Verificar e aplicar cupom automaticamente
+    let originalPrice: number | undefined;
+    let couponCode: string | undefined;
+    let discount: number | undefined;
+    
+    if (canUseFirstBookingCoupon(user.id)) {
+      const couponResult = applyCoupon('#temporadatop', totalPrice, user.id);
+      if (couponResult.valid) {
+        originalPrice = totalPrice;
+        totalPrice = couponResult.finalPrice;
+        couponCode = '#temporadatop';
+        discount = couponResult.discount;
+        toast.success('🎉 Cupom #temporadatop aplicado automaticamente! 50% OFF');
+      }
+    }
 
     const result = createBooking({
       userId: user.id,
@@ -87,6 +103,9 @@ export default function PropertyDetail() {
       checkOut,
       guests,
       totalPrice,
+      originalPrice,
+      couponCode,
+      discount,
       depositPaid: false,
       depositAmount,
     });
@@ -101,7 +120,7 @@ export default function PropertyDetail() {
   };
 
   const totalPrice = calculateTotalPrice();
-  const depositAmount = totalPrice * 0.1;
+  const depositAmount = 79.90; // Taxa única de reserva
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -268,6 +287,17 @@ export default function PropertyDetail() {
 
                 {totalPrice > 0 && (
                   <div className="border-t pt-4 space-y-2">
+                    {user && canUseFirstBookingCoupon(user.id) && (
+                      <div className="bg-gradient-to-r from-orange-50 to-pink-50 p-3 rounded-lg border-2 border-dashed border-orange-300 mb-3">
+                        <div className="flex items-center gap-2 text-sm">
+                          <span className="text-2xl">🎁</span>
+                          <div>
+                            <p className="font-bold text-orange-600">Cupom #temporadatop ativo!</p>
+                            <p className="text-xs text-gray-600">50% OFF será aplicado automaticamente</p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                     <div className="flex justify-between">
                       <span>Total da estadia</span>
                       <span className="font-semibold">{formatPrice(totalPrice)}</span>

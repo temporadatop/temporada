@@ -246,3 +246,14 @@
 - [x] Atualizar capacidade de todas as chácaras para 20 hóspedes
 - [x] Ajustar preços das diárias para R$ 300 a R$ 400
 - [ ] Testar exibição da nova capacidade e preços
+
+
+## 🎁 Sistema de Cupom de Desconto
+
+- [x] Criar modal de boas-vindas com cupom #temporadatop (50% desconto)
+- [x] Implementar lógica de validação: apenas primeiro aluguel
+- [x] Aplicar cupom automaticamente na reserva
+- [x] Calcular desconto de 50% no valor total dos dias
+- [x] Exibir valor original e valor com desconto
+- [x] Salvar informação de cupom usado no localStorage
+- [ ] Testar fluxo completo: login → modal → reserva com desconto
