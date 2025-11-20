@@ -116,3 +116,7 @@
 - [x] Atualizar drizzle.config.ts para PostgreSQL
 - [x] Atualizar server/db.ts para PostgreSQL
 - [x] Fazer push para GitHub
+
+## 🔧 Correção Deploy Render
+- [ ] Alterar comando db:push para usar apenas drizzle-kit push
+- [ ] Fazer push para GitHub
