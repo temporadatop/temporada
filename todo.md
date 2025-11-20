@@ -115,4 +115,4 @@
 - [x] Converter schema de MySQL para PostgreSQL
 - [x] Atualizar drizzle.config.ts para PostgreSQL
 - [x] Atualizar server/db.ts para PostgreSQL
-- [ ] Fazer push para GitHub
+- [x] Fazer push para GitHub
