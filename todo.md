@@ -103,3 +103,10 @@
 
 ## 🎯 Branding
 - [x] Integrar slogan "TemporadaTOP - salvando a sua temporada!!!" em toda interface
+
+## 🔄 GitHub & Deploy
+- [ ] Configurar repositório GitHub
+- [ ] Fazer push inicial do código
+- [ ] Configurar Render para backend
+- [ ] Configurar Render para frontend
+- [ ] Documentar variáveis de ambiente

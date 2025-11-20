@@ -1,0 +1,23 @@
+services:
+  # Web Service (Backend + Frontend)
+  - type: web
+    name: temporadatop
+    runtime: node
+    plan: free  # Altere para 'starter' ou superior para produção
+    region: oregon
+    branch: main
+    buildCommand: pnpm install && pnpm db:push && pnpm build
+    startCommand: pnpm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false  # Configure manualmente no dashboard
+      - key: JWT_SECRET
+        generateValue: true  # Gera automaticamente
+      - key: VITE_APP_TITLE
+        value: TemporadaTop
+      - key: VITE_APP_LOGO
+        value: /logo.png
+      # Adicione as outras variáveis manualmente no dashboard do Render
