@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { APP_LOGO, APP_SLOGAN, APP_TITLE, getLoginUrl } from "@/const";
 import { useAuth } from "@/_core/hooks/useAuth";
+import { useGeolocation } from "@/hooks/useGeolocation";
 import { 
   Home as HomeIcon, 
   CheckCircle, 
@@ -22,6 +23,7 @@ import { Link } from "wouter";
 
 export default function Home() {
   const { user, isAuthenticated } = useAuth();
+  const { city, loading: geoLoading } = useGeolocation();
 
   return (
     <div className="min-h-screen">
@@ -109,7 +111,7 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-2 bg-gradient-to-r from-[#FF7A00] via-[#FF2E63] to-[#D400FF] bg-clip-text text-transparent">
-              Imóveis em Destaque
+              Imóveis em Destaque {city && `próximo da Região de ${city}`}
             </h2>
             <p className="text-lg text-gray-600">
               Reserve agora para as melhores datas do ano

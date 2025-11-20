@@ -144,4 +144,10 @@
 
 ## 🎨 Ajuste Altura Hero
 - [x] Reduzir padding vertical do Hero section
+- [x] Fazer push para GitHub
+
+## 🌍 Geolocalização por IP
+- [x] Criar hook useGeolocation para detectar cidade do visitante
+- [x] Integrar API de geolocalização gratuita
+- [x] Atualizar título "Imóveis em Destaque" com cidade dinâmica
 - [ ] Fazer push para GitHub
