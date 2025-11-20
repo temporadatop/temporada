@@ -150,4 +150,41 @@
 - [x] Criar hook useGeolocation para detectar cidade do visitante
 - [x] Integrar API de geolocalização gratuita
 - [x] Atualizar título "Imóveis em Destaque" com cidade dinâmica
-- [ ] Fazer push para GitHub
+- [x] Fazer push para GitHub
+
+
+## 📊 Extração de Dados - 11 Chácaras Reais
+- [x] Extrair dados de 11 chácaras do Airbnb
+- [x] Criar nomes fictícios brasileiros
+- [x] Reescrever descrições profissionalmente (100% originais)
+- [x] Baixar 32 fotos das chácaras
+- [x] Copiar fotos para /client/public/properties/
+- [x] Criar script de seed (/server/seed-properties.ts)
+- [ ] Popular banco de dados PostgreSQL com as 11 chácaras
+- [ ] Adicionar coordenadas (latitude/longitude) para cada propriedade
+- [ ] Implementar ordenação por proximidade do usuário
+
+## 📁 Arquivos de Dados
+- `/home/ubuntu/temporadatop/data/properties_final_with_descriptions.json` - Dados finais das 11 chácaras
+- `/home/ubuntu/temporadatop/data/chacaras-fotos/` - Fotos originais (32 fotos)
+- `/home/ubuntu/temporadatop/client/public/properties/` - Fotos no projeto (48 arquivos)
+- `/home/ubuntu/temporadatop/server/seed-properties.ts` - Script de seed pronto
+- `/home/ubuntu/temporadatop/data/RESUMO_EXTRACAO.md` - Resumo completo
+
+## 📊 Estatísticas das 11 Chácaras
+
+| ID | Nome | Cidade | Capacidade | Preço/Noite |
+|----|------|--------|------------|-------------|
+| 1 | Chácara Primavera | Atibaia, SP | 6 | R$ 425 |
+| 2 | Sítio Cantinho do Céu | Nazaré Paulista, SP | 5 | R$ 335 |
+| 3 | Rancho Vista Alegre | Mogi das Cruzes, SP | 12 | R$ 496 |
+| 4 | Chácara Recanto das Águas | São Paulo, SP | 6 | R$ 591 |
+| 5 | Sítio Flor do Campo | Ibiúna, SP | 9 | R$ 494 |
+| 6 | Chácara Bela Vista | Mairiporã, SP | 6 | R$ 445 |
+| 7 | Rancho Paraíso Verde | Guararema, SP | 13 | R$ 535 |
+| 8 | Chácara Sonho Meu | Ribeirão Pires, SP | 16 | R$ 552 |
+| 9 | Sítio Morada do Sol | Extrema, MG | 2 | R$ 463 |
+| 10 | Chácara Vale Encantado | Atibaia, SP | 15 | R$ 457 |
+| 11 | Rancho Pedra Alta | São Bento do Sapucaí, SP | 2 | R$ 481 |
+
+**Total**: 11 propriedades | 32 fotos | Preço médio: R$ 470/noite

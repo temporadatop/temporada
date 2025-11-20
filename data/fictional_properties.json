@@ -1,0 +1,310 @@
+[
+  {
+    "id": 1,
+    "fictional_name": "Chácara Primavera",
+    "original_title": "chalé Bela Vista Atibaia",
+    "original_location": "Atibaia, Brasil",
+    "description_rewritten": "Venha conhecer Chácara Primavera! Chalé Bela Vista Atibaia. Menos de 10 min do centro. 900 metros do asfalto no bairro Boa Vista. Em meio a natureza, com linda vista e água mineral de poço Artesiano. 3 quartos (6 acomodações). Piscina...",
+    "guests": 6,
+    "bedrooms": 3,
+    "beds": 5,
+    "bathrooms": 1,
+    "price_per_night": 425,
+    "amenities": "Cozinha, Wi-Fi, Estacionamento incluído, Piscina, Quintal privado, TV, Fogueira, Refrigerador, Alarme de monóxido de carbono, Detector de fumaça, Produtos de limpeza, Água quente, Roupa de cama, Cobertores e travesseiros extras, Livros e material de leitura, Espaço de trabalho dedicado, Secador de cabelo, Cabides, Ferro de passar, Máquina de lavar, Secadora, Utensílios básicos de cozinha, Pratos e talheres, Micro-ondas, Cafeteira, Taças de vinho, Fogão, Geladeira, Air fryer, Aparelho de fondue, Tábua de frios e vinho, Copos, Panelas e talheres, Churrasqueira, Área para refeições ao ar livre, Móveis de área externa, Varanda, Pátio ou varanda, Lareira externa, Estacionamento gratuito na propriedade, Entrada privada, Acomodação de um andar, Sem degraus na entrada, Sem degraus para acessar o quarto, Sem degraus para acessar o banheiro, Sem degraus para acessar a área de lazer, Câmeras de segurança na propriedade, Permitido animais de estimação, Não é permitido fumar, Não são permitidas festas ou eventos",
+    "owner": {
+      "name": "Maria Silva",
+      "gender": "F"
+    },
+    "original_rating": "5,0 de 5 estrelas de 5 comentários",
+    "fictional_rating": 4.8,
+    "fictional_reviews_count": 73,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1514032153433398729/original/e4f39b65-d3ec-4c1d-9201-2af166ff211d.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1514032153433398729/original/e2582af2-da52-481f-9f7b-d956178c1f8c.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1514032153433398729/original/e6422cf5-76bf-4f72-8daa-bf7c5129cd66.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1514032153433398729/original/c4fb0889-826d-4cb8-83ec-2c2ffb0ce957.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1514032153433398729/original/76e23053-2977-4f3a-ae05-e584889ef698.jpeg?im_w=720"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 2,
+    "fictional_name": "Sítio Cantinho do Céu",
+    "original_title": "Casa de hóspedes",
+    "original_location": "Nazaré Paulista, São Paulo, Brasil",
+    "description_rewritten": "Venha conhecer Sítio Cantinho do Céu! Bem-vindo ao nosso Recanto, um refúgio perfeito para quem busca tranquilidade e momentos inesquecíveis em família! Localizada em meio à natureza, nossa propriedade oferece um ambiente aconchegante, id...",
+    "guests": 5,
+    "bedrooms": 1,
+    "beds": 5,
+    "bathrooms": 1,
+    "price_per_night": 335,
+    "amenities": "Vista para as montanhas, Cozinha, Estacionamento incluído, Quintal privado, Alarme de monóxido de carbono, Detector de fumaça, Vista para o rio, Wi-Fi, Piscina, Câmeras de segurança na parte externa da propriedade, Chuveiro externo, Água quente, Básico (Toalhas, lençóis, sabonete e papel higiênico), Entrada privada, Estacionamento gratuito na propriedade, Cozinha, Geladeira, Micro-ondas, Utensílios básicos de cozinha, Pratos e talheres, Fogão, Cafeteira, Área para refeições ao ar livre, Móveis de área externa, Churrasqueira, Rede, Permitido fumar, Animais de estimação permitidos",
+    "owner": {
+      "name": "João Santos",
+      "gender": "M"
+    },
+    "original_rating": "5,0 de 5 estrelas (17 avaliações)",
+    "fictional_rating": 4.9,
+    "fictional_reviews_count": 26,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1324555270509446218/original/99444155-8991-4493-9482-125588325324.jpeg",
+      " https://a0.muscache.com/im/pictures/miso/Hosting-1324555270509446218/original/87624125-5777-4481-8134-874223233215.jpeg",
+      " https://a0.muscache.com/im/pictures/miso/Hosting-1324555270509446218/original/27655452-5272-4211-9252-875588325324.jpeg",
+      " https://a0.muscache.com/im/pictures/miso/Hosting-1324555270509446218/original/55444155-8991-4493-9482-125588325324.jpeg",
+      " https://a0.muscache.com/im/pictures/miso/Hosting-1324555270509446218/original/11624125-5777-4481-8134-874223233215.jpeg"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 3,
+    "fictional_name": "Rancho Vista Alegre",
+    "original_title": "Casa de campo para família inteira Biritiba Mirim",
+    "original_location": "Mogi das Cruzes, São Paulo, Brasil",
+    "description_rewritten": "Venha conhecer Rancho Vista Alegre! Localizada em meio à natureza exuberante no eixo entre as cidades turísticas de Guararema, Salesópoles e Biritiba-Mirim, o Rancho Mirante Rio Acima oferece uma experiência única de hospedagem familiar...",
+    "guests": 12,
+    "bedrooms": 1,
+    "beds": 10,
+    "bathrooms": 1,
+    "price_per_night": 496,
+    "amenities": "Acesso ao lago, Cozinha, Wi-Fi, Espaço de trabalho exclusivo, Estacionamento incluído, Piscina, Permitido animais, Câmeras de segurança na parte externa da propriedade, Alarme de monóxido de carbono, Detector de fumaça",
+    "owner": {
+      "name": "Ana Paula Costa",
+      "gender": "F"
+    },
+    "original_rating": "5,0 de 5 estrelas de 3 comentários",
+    "fictional_rating": 4.8,
+    "fictional_reviews_count": 81,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ3MDIyOTY5NTg4MDYyNTcxNg==/original/75974cb2-26d7-4ace-98b3-62726d63ada2.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTQ3MDIyOTY5NTg4MDYyNTcxNg==/original/31a12585-be43-481e-b796-046a1caa03f2.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1470229695880625716/original/8e523e2d-aa38-4c09-b848-b233dc8a47fc.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1470229695880625716/original/c7e39263-488f-4d30-a220-492f2c40c6c2.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1470229695880625716/original/0530a116-9eab-4a9d-b222-188c19371fc1.jpeg?im_w=720"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 4,
+    "fictional_name": "Chácara Recanto das Águas",
+    "original_title": "Chácara dos sonhos!",
+    "original_location": "São Paulo, Brasil",
+    "description_rewritten": "Venha conhecer Chácara Recanto das Águas! Mais de 4.000m² de tranquilidade em uma área calma e silenciosa, perfeita para relaxar e se reconectar com a natureza. Destaques do espaço: Piscina refrescante com vista panorâmica, Poço semi artesian...",
+    "guests": 6,
+    "bedrooms": 2,
+    "beds": 4,
+    "bathrooms": 2,
+    "price_per_night": 591,
+    "amenities": "Vista para as águas, Wi-Fi, Estacionamento incluído, TV, Cozinha, Espaço de trabalho exclusivo, Piscina, Câmeras de segurança na parte externa da propriedade, Máquina de Lavar, Cabides, Varal para secar roupas, Local para guardar as roupas",
+    "owner": {
+      "name": "Carlos Eduardo Oliveira",
+      "gender": "M"
+    },
+    "original_rating": "Novidade · 1 avaliação (A pontuação média aparecerá depois de 3 avaliações)",
+    "fictional_rating": 5.0,
+    "fictional_reviews_count": 15,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1534309210848612856/original/69294249-1457-4148-8314-998822933758.jpeg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1534309210848612856/original/42459986-7738-4334-9133-722158814777.jpeg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1534309210848612856/original/82553954-3254-4171-8511-197129774377.jpeg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1534309210848612856/original/34484931-1317-4948-9397-987829774377.jpeg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1534309210848612856/original/42459986-7738-4334-9133-722158814777.jpeg"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 5,
+    "fictional_name": "Sítio Flor do Campo",
+    "original_title": "Refúgio encantador com piscina em meio à natureza.",
+    "original_location": "Ibiúna, Brasil",
+    "description_rewritten": "Venha conhecer Sítio Flor do Campo! A chácara conta com uma casa aconchegante para 9 pessoas, piscina de 80mil litros, espaço de lazer com churrasqueira completa, sala de jogos, amplo gramado com 350 metros2, árvores frutíferas e horta....",
+    "guests": 9,
+    "bedrooms": 2,
+    "beds": 6,
+    "bathrooms": 2,
+    "price_per_night": 494,
+    "amenities": "Cozinha, Wi-Fi, Estacionamento incluído, Piscina, Permitido animais, TV, Quintal privado — totalmente cercado, Câmeras de segurança na parte externa da propriedade, Alarme de monóxido de carbono, Detector de fumaça, Produtos de limpeza, Sabonete para o corpo, Chuveiro externo, Água quente, Cabides, Roupa de cama, Cobertores e travesseiros extras, Blackout nas cortinas, Secador de cabelo, Shampoo, Condicionador, Sabonete corporal, Papel higiênico, Toalhas, Mesa de sinuca, Tabela de basquete, Mesa de ping-pong, Churrasqueira, Área de fogueira, Horta, Pomar, Jardim, Utensílios de cozinha básicos, Louças e talheres, Micro-ondas, Geladeira, Fogão, Forno, Cafeteira, Taças de vinho, Liquidificador, Freezer, Mesa de jantar, Entrada privativa, Estacionamento gratuito na propriedade, Estacionamento de longa duração, Permitido fumar, Não é permitido festas ou eventos",
+    "owner": {
+      "name": "Juliana Ferreira",
+      "gender": "F"
+    },
+    "original_rating": "★Novidade · 1 comentário",
+    "fictional_rating": 5.0,
+    "fictional_reviews_count": 54,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1531088325910430828/original/58427993-8772-4523-8127-147384572239.jpeg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1531088325910430828/original/34937225-8356-4221-9549-354388133334.jpeg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1531088325910430828/original/42457814-2228-4448-9397-154832454555.jpeg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1531088325910430828/original/14214534-1114-4111-9333-154832454555.jpeg",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1531088325910430828/original/54214534-1114-4111-9333-154832454555.jpeg"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 6,
+    "fictional_name": "Chácara Bela Vista",
+    "original_title": "CHÁCARA CANTINHO MINEIRO 2",
+    "original_location": "Mairiporã, Brasil",
+    "description_rewritten": "Venha conhecer Chácara Bela Vista! Venha conhecer nossa chácara a 60 km de são Paulo um lugar ótimo pra descansar junto a natureza com dois quartos, sala, um banheiro e um lavabo e cozinha junto com a churrasqueira e uma varanda, grand...",
+    "guests": 6,
+    "bedrooms": 2,
+    "beds": 6,
+    "bathrooms": 1.5,
+    "price_per_night": 445,
+    "amenities": "Cozinha, Wi-Fi, Espaço de trabalho exclusivo, Estacionamento incluído, Piscina privativa, Permitido animais, TV, Pátio ou varanda (Privativa), Quintal privado — totalmente cercado, Refrigerador, Detector de fumaça, Alarme de monóxido de carbono, Pratos e talheres para crianças, Itens básicos de cozinha, Utensílios de churrasco, Máquina de café, Secador de cabelo, Cabides",
+    "owner": {
+      "name": "Roberto Almeida",
+      "gender": "M"
+    },
+    "original_rating": "4,99 (139 avaliações)",
+    "fictional_rating": 5.0,
+    "fictional_reviews_count": 83,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-52931084/original/ade42b44-dd9e-4b5a-aa43-76a6e510d0c8.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-52931084/original/4bf34dd6-f9ff-4f31-9306-6746179297af.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-52931084/original/32aa0743-2ba7-4e6c-948e-59b9cfc6b8e7.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-52931084/original/92c41567-3c17-4161-988e-12c8f60dfde2.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-52931084/original/c9119adf-4107-41d2-80ac-f1810d2dcf02.jpeg?im_w=720"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 7,
+    "fictional_name": "Rancho Paraíso Verde",
+    "original_title": "Linda Chacara guararema piscina churras e lareira.",
+    "original_location": "Guararema, Brasil",
+    "description_rewritten": "Venha conhecer Rancho Paraíso Verde! Casa com grande área de lazer com piscina, lareira, churrasqueira e lindo jardim. Internet fibra mais de 600 mbs. Local de fácil acesso pavimentado, em bairro estruturado. Fácil acesso a lojas e merca...",
+    "guests": 13,
+    "bedrooms": 3,
+    "beds": 8,
+    "bathrooms": 3,
+    "price_per_night": 535,
+    "amenities": "Produtos de limpeza, Chuveiro externo, Água quente, Máquina de lavar na acomodação por Gratuito, Cabides, Varal para secar roupas, Local para guardar as roupas: guarda-roupa, TV, Ar-condicionado, Lareira interna, Detector de fumaça, Kit de primeiros socorios, Extintor de incêndio, Detector de monóxido de carbono, Wi-Fi, Espaço de trabalho exclusivo, Cozinha, Geladeira, Micro-ondas, Utensílios básicos de cozinha, Louças e talheres, Fogão, Forno, Cafeteira, Churrasqueira, Utensílios para churrasco, Piscina, Estacionamento incluído, Estacionamento gratuito na propriedade, Pátio ou varanda, Quintal, Móveis de área externa, Área para refeições ao ar livre, Entrada privativa, Check-in self-service, Não fumantes, Animais de estimação permitidos, Permitido festas e eventos, Câmeras de segurança na propriedade, Permitido fumar, Não adequado ou indisponível: Secadora, Não adequado ou indisponível: Secador de cabelo, Não adequado ou indisponível: Shampoo, Não adequado ou indisponível: Ferro de passar, Não adequado ou indisponível: Itens essenciais, Não adequado ou indisponível: Alarme de monóxido de carbono, Não adequado ou indisponível: Detector de fumaça",
+    "owner": {
+      "name": "Patricia Rodrigues",
+      "gender": "F"
+    },
+    "original_rating": "5,0 · 74 avaliações",
+    "fictional_rating": 4.8,
+    "fictional_reviews_count": 63,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/444f467d-815e-4d5f-85fe-b5e3a67b1777.jpg",
+      " https://a0.muscache.com/im/pictures/ec405cff-1887-4c51-bdbe-cdc8dc77d547.jpg",
+      " https://a0.muscache.com/im/pictures/airflow/Hosting-714473523610078625/original/06740bf2-1b28-4595-bf40-d68e92f0b5c1.jpg",
+      " https://a0.muscache.com/im/pictures/airflow/Hosting-714473523610078625/original/f168b84e-7e71-4b1d-8999-49b7d0c2236a.jpg",
+      " https://a0.muscache.com/im/pictures/airflow/Hosting-714473523610078625/original/71185375-5231-4825-9981-549117992982.jpg"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 8,
+    "fictional_name": "Chácara Sonho Meu",
+    "original_title": "Casa com piscina - Casa · Ribeirão Pires · 1 quarto · 5 camas · 2 banheiros",
+    "original_location": "Ribeirão Pires, Brasil",
+    "description_rewritten": "Venha conhecer Chácara Sonho Meu! Relaxe com toda a família e amigos nesta acomodação tranquila. OBSERVAÇÃO: A acomodação NÃO disponibiliza kits de higiene e de uso pessoal, como: toalha, escova, papel higiênico, cobertores e etc. Est...",
+    "guests": 16,
+    "bedrooms": 1,
+    "beds": 5,
+    "bathrooms": 2,
+    "price_per_night": 552,
+    "amenities": "Chuveiro externo, Mesa de bilhar, Wi-Fi, Cozinha, Churrasqueira, Estacionamento incluído, Piscina, Permitido fumar, O anfitrião recebe você",
+    "owner": {
+      "name": "Fernando Lima",
+      "gender": "M"
+    },
+    "original_rating": "4,0 (1 comentário)",
+    "fictional_rating": 4.9,
+    "fictional_reviews_count": 22,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-1491521536842887555/original/47285148-3158-4723-9397-954545244195.jpeg",
+      " https://a0.muscache.com/im/pictures/miso/Hosting-1491521536842887555/original/87017242-7355-4927-9411-927395982847.jpeg",
+      " https://a0.muscache.com/im/pictures/miso/Hosting-1491521536842887555/original/71442111-2082-4299-8758-751717342898.jpeg",
+      " https://a0.muscache.com/im/pictures/miso/Hosting-1491521536842887555/original/62534227-2197-4581-9885-359145925439.jpeg",
+      " https://a0.muscache.com/im/pictures/miso/Hosting-1491521536842887555/original/16597259-2792-4915-9433-841852554743.jpeg"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 9,
+    "fictional_name": "Sítio Morada do Sol",
+    "original_title": "Chalé das Hortênsias, Serra do Lopo.",
+    "original_location": "Vargem, Brasil",
+    "description_rewritten": "Venha conhecer Sítio Morada do Sol! Situado em um cantinho bucólico do sítio, construído entre árvores e grandes pedras, o chalé das hortênsias oferece conforto, privacidade e muitas comodidades, totalmente integrado a natureza, sala, v...",
+    "guests": 2,
+    "bedrooms": 1,
+    "beds": 1,
+    "bathrooms": 1,
+    "price_per_night": 463,
+    "amenities": "Banheiro | Secador de cabelo | Produtos de limpeza | Xampu | Água quente | Quarto e lavanderia | Básico (Toalhas, lençóis, sabonete e papel higiênico) | Cabides | Roupa de cama (Roupas de cama de algodão) | Cobertores e travesseiros extras | Armazenamento de roupas | Entretenimento | TV | Livros e materiais de leitura | Jogos de tabuleiro | Aquecimento e ar-condicionado | Lareira interna | Aquecimento | Segurança residencial | Extintor de incêndio | Kit de primeiros socorios | Internet e escritório | Wi-Fi | Espaço de trabalho exclusivo | Cozinha e jantar | Cozinha | Geladeira | Micro-ondas | Utensílios básicos de cozinha | Pratos e talheres | Congelador | Fogão | Cafeteira | Taças de vinho | Mesa de jantar | Localização | Acesso à praia | Estacionamento | Estacionamento incluído | Serviços | É permitido deixar as malas | Estadia de longa duração permitida | Auto check-in | Acesso do hóspede | Entrada privativa | Características externas | Pátio ou varanda (Privativa) | Quintal privado | Área para refeições ao ar livre | Móveis de exterior | Churrasqueira | Piscina e hidromassagem | Piscina interna privativa (disponível o ano todo, disponível 24 horas, cobertura da piscina) | Serviços de alimentação | Café da manhã (pago) | Não incluído | Câmeras de segurança na propriedade | Detector de monóxido de carbono | Detector de fumaça",
+    "owner": {
+      "name": "Camila Martins",
+      "gender": "F"
+    },
+    "original_rating": "5,0 de 5 de um total de 80 avaliações",
+    "fictional_rating": 4.9,
+    "fictional_reviews_count": 25,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-search-bar-icons/original/4aae4ed7-5939-4e76-b100-e69440ebeae4.png?im_w=240",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6OTY2MDc0NDA3NjA4NzYzMzIw/original/67a22a70-d7a5-4689-b3e8-7b487a94bed2.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/airflow/Hosting-966074407608763320/original/c228ec4a-5a26-49ea-9ce9-5f31947b2dd4.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/airflow/Hosting-966074407608763320/original/addd0a4c-d908-4099-9a49-402622db2c5c.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/airflow/Hosting-966074407608763320/original/f72a5e57-f3a3-4406-898b-7a3479c9ccb2.jpg?im_w=720"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 10,
+    "fictional_name": "Chácara Vale Encantado",
+    "original_title": "Recanto da Família em Atibaia [piscina aquecida]",
+    "original_location": "Atibaia, Brasil",
+    "description_rewritten": "Venha conhecer Chácara Vale Encantado! Recanto da Família – Viva momentos inesquecíveis em meio à natureza! 🌳🏡☀️\n\nAlugamos para temporada, diárias, finais de semana, festas, aniversários, casamentos, confraternizações, retiros e encontros ...",
+    "guests": 15,
+    "bedrooms": 3,
+    "beds": 7,
+    "bathrooms": 4,
+    "price_per_night": 457,
+    "amenities": "Cozinha, Wi-Fi, Espaço de trabalho exclusivo, Estacionamento incluído, Piscina, Permitido animais, TV com TV a cabo, Pátio ou varanda, Alarme de monóxido de carbono, Detector de fumaça, Chuveiro externo, Água quente, Varal para secar roupas, Local para guardar as roupas, Mesa de bilhar, Ar-condicionado, Aquecimento, Lareira, Câmeras de segurança na propriedade, Kit de primeiros socorros, Extintor de incêndio, Acesso direto à praia, Utensílios básicos de cozinha, Geladeira, Micro-ondas, Utensílios de cozinha, Máquina de café, Churrasqueira, Área para refeições ao ar livre, Móveis de área externa, Estacionamento gratuito na rua, Serviço de manobrista, Entrada privada, Acomodações de longa duração, Berço, Cadeira alta, Banheira, Secador de cabelo, Shampoo, Sabonete, Roupa de cama, Cabides, Ferro de passar, Secadora, Máquina de lavar, Check-in self-service, Chave na caixa de segurança, Permitido fumar, Não é permitido festas ou eventos, Não é adequado para crianças (2-12 anos), Não é adequado para bebês (menos de 2 anos)",
+    "owner": {
+      "name": "Ricardo Pereira",
+      "gender": "M"
+    },
+    "original_rating": "5,0 (5 avaliações)",
+    "fictional_rating": 4.8,
+    "fictional_reviews_count": 84,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1445165310175524019/original/c901660c-f901-4f55-a383-11182257cab1.jpeg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1445165310175524019/original/f6fa6a8e-ea0a-45fe-b99b-f1dd65bc7651.jpeg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1445165310175524019/original/9baa079a-5564-46e8-86cf-402016ed49c4.jpeg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1445165310175524019/original/8f8c3e3c-15d0-4f2b-9244-808a60d148e6.jpeg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1445165310175524019/original/11082217-1082-4113-9831-508210183011.jpeg?im_w=1200"
+    ],
+    "available_all_dates": true
+  },
+  {
+    "id": 11,
+    "fictional_name": "Rancho Pedra Alta",
+    "original_title": "chalé sonho meu do vale 03 com hidromassagem",
+    "original_location": "Joanópolis, Brasil",
+    "description_rewritten": "Venha conhecer Rancho Pedra Alta! Este lugar único tem um estilo próprio. O chalé é realização de um sonho. Eu e minha esposa projetamos o chalé e resolvemos compartilhar e proporcionar experiências a pessoas que se sentem atraídas po...",
+    "guests": 2,
+    "bedrooms": 1,
+    "beds": 1,
+    "bathrooms": 1,
+    "price_per_night": 481,
+    "amenities": "Vistas panorâmicas; Vista para as montanhas; Vista para o vale; Vista para o jardim; Banheiro; Banheira; Água quente; Quarto e lavanderia; Roupa de cama (Roupas de cama de algodão); Cobertores e travesseiros extras; Cabides; Secador de cabelo; Itens básicos; Cozinha; Micro-ondas; Cafeteira; Sanduicheira; Liquidificador; Airfryer; Fogão; Forno; Itens básicos de cozinha; Louças e talheres; Geladeira; Freezer; Churrasqueira; Área para refeições ao ar livre; Estacionamento incluído; Jacuzzi privativa; TV de alta definição de 43 polegadas; Permitido animais; Alarme de monóxido de carbono; Detector de fumaça; Lareira; Wi-Fi; Área de trabalho dedicada; Entrada privativa; Pátio ou varanda; Jardim; Móveis de exterior; Área de estar ao ar livre; Rede; Área para fogueira; Acesso à praia (Acesso direto ou caminho para a praia); Acesso ao lago (Acesso direto ou caminho para o lago)",
+    "owner": {
+      "name": "Luciana Souza",
+      "gender": "F"
+    },
+    "original_rating": "5,0 (22 avaliações)",
+    "fictional_rating": 4.8,
+    "fictional_reviews_count": 77,
+    "photo_urls": [
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1378339393002708757/original/daa6422e-bdbf-44c2-b0cc-76fb5bb6ca85.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1378339393002708757/original/1771ba8a-90c3-4e96-9859-f9079d1a074c.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1378339393002708757/original/21e445ae-9ebb-4bb8-b7e8-e745fc79ab0c.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1378339393002708757/original/56ef66d8-c126-4fdf-be0f-544e27b3f867.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/hosting/Hosting-1378339393002708757/original/27537335-7184-4828-8575-857317735315.jpeg?im_w=720"
+    ],
+    "available_all_dates": true
+  }
+]

@@ -1,0 +1,23 @@
+# Lista Completa de 11 Chácaras para Extrair
+
+1. https://www.airbnb.com.br/rooms/1514032153433398729?adults=1&check_in=2025-12-13&check_out=2025-12-18
+
+2. https://www.airbnb.com.br/rooms/1324555270509446218?adults=1&check_in=2025-11-21&check_out=2025-11-26
+
+3. https://www.airbnb.com.br/rooms/1470229695880625716?adults=1&check_in=2025-12-01&check_out=2025-12-06
+
+4. https://www.airbnb.com.br/rooms/1534309210848612856?adults=1&check_in=2025-11-21&check_out=2025-11-26
+
+5. https://www.airbnb.com.br/rooms/1531088325910430828?adults=1&check_in=2025-11-23&check_out=2025-11-28
+
+6. https://www.airbnb.com.br/rooms/52931084?search_mode=regular_search&adults=1&check_in=2025-12-01&check_out=2025-12-06
+
+7. https://www.airbnb.com.br/rooms/714473523610078625?search_mode=regular_search&adults=1&check_in=2025-12-01&check_out=2025-12-06
+
+8. https://www.airbnb.com.br/rooms/1491521536842887555?search_mode=regular_search&adults=1&check_in=2025-11-24&check_out=2025-11-29
+
+9. https://www.airbnb.com.br/rooms/966074407608763320?search_mode=regular_search&adults=1&check_in=2025-11-24&check_out=2025-11-29
+
+10. https://www.airbnb.com.br/rooms/1445165310175524019?search_mode=regular_search&adults=1&check_in=2025-11-22&check_out=2025-11-27
+
+11. https://www.airbnb.com.br/rooms/1378339393002708757?search_mode=regular_search&adults=1&check_in=2025-11-25&check_out=2025-11-30
