@@ -242,3 +242,7 @@
 - [x] Atualizar textos explicando que a taxa é devolvida no dia da reserva
 - [x] Ajustar cálculos na página de pagamento
 - [ ] Testar fluxo completo de reserva com nova taxa
+
+- [x] Atualizar capacidade de todas as chácaras para 20 hóspedes
+- [x] Ajustar preços das diárias para R$ 300 a R$ 400
+- [ ] Testar exibição da nova capacidade e preços
