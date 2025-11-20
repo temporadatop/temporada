@@ -236,6 +236,7 @@ export const appRouter = router({
           checkOut: input.checkOut,
           totalAmount,
           depositAmount,
+          fullPaymentAmount: totalAmount - depositAmount,
           status: 'pending',
         });
 
@@ -301,7 +302,7 @@ export const appRouter = router({
 
         // If both confirmed and no problems, update status to completed
         if ((isGuest && booking.ownerCheckOutConfirmed) || (isOwner && booking.guestCheckOutConfirmed)) {
-          if (!booking.problemReported) {
+          if (!booking.hasIssues) {
             updateData.status = 'checked_out';
             updateData.depositReturned = true;
             updateData.depositReturnedAt = new Date();
@@ -331,8 +332,8 @@ export const appRouter = router({
         }
 
         await db.updateBooking(input.bookingId, {
-          problemReported: true,
-          problemDescription: input.description,
+          hasIssues: true,
+          issueDescription: input.description,
           status: 'disputed',
         });
 
@@ -384,7 +385,7 @@ export const appRouter = router({
         // Create payment record
         await db.createPayment({
           userId: ctx.user.id,
-          type: 'premium_subscription',
+          type: "premium_upgrade",
           amount: 29999, // R$ 299,99 em centavos
           status: 'pending',
         });
@@ -432,7 +433,7 @@ export const appRouter = router({
         await db.createPayment({
           userId: ctx.user.id,
           bookingId: input.bookingId,
-          type: 'booking_deposit',
+          type: "deposit",
           amount: booking.depositAmount,
           status: 'pending',
         });

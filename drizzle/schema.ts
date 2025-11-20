@@ -1,23 +1,25 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, boolean, decimal } from "drizzle-orm/mysql-core";
+import { boolean, integer, pgEnum, pgTable, text, timestamp, varchar } from "drizzle-orm/pg-core";
 
 /**
  * Core user table backing auth flow.
  * Extended with role field to differentiate between locatário, proprietário and admin
  */
-export const users = mysqlTable("users", {
-  id: int("id").autoincrement().primaryKey(),
+export const roleEnum = pgEnum("role", ["user", "admin", "owner"]);
+
+export const users = pgTable("users", {
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
   openId: varchar("openId", { length: 64 }).notNull().unique(),
   name: text("name"),
   email: varchar("email", { length: 320 }),
   loginMethod: varchar("loginMethod", { length: 64 }),
-  role: mysqlEnum("role", ["user", "admin", "owner"]).default("user").notNull(),
+  role: roleEnum("role").default("user").notNull(),
   phone: varchar("phone", { length: 20 }),
   cpf: varchar("cpf", { length: 14 }),
   // Proprietário specific fields
   isPremium: boolean("isPremium").default(false).notNull(), // Pagou os R$ 299,99
   premiumPaidAt: timestamp("premiumPaidAt"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
 });
 
@@ -27,9 +29,11 @@ export type InsertUser = typeof users.$inferInsert;
 /**
  * Imóveis (chácaras, casas) cadastrados pelos proprietários
  */
-export const properties = mysqlTable("properties", {
-  id: int("id").autoincrement().primaryKey(),
-  ownerId: int("ownerId").notNull(), // FK to users
+export const propertyStatusEnum = pgEnum("property_status", ["active", "inactive", "pending"]);
+
+export const properties = pgTable("properties", {
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+  ownerId: integer("ownerId").notNull(), // FK to users
   title: varchar("title", { length: 255 }).notNull(),
   description: text("description").notNull(),
   address: text("address").notNull(), // Endereço completo (liberado após reserva)
@@ -38,16 +42,16 @@ export const properties = mysqlTable("properties", {
   zipCode: varchar("zipCode", { length: 10 }),
   latitude: varchar("latitude", { length: 50 }),
   longitude: varchar("longitude", { length: 50 }),
-  capacity: int("capacity").notNull(), // Número de pessoas
-  bedrooms: int("bedrooms"),
-  bathrooms: int("bathrooms"),
-  pricePerNight: int("pricePerNight").notNull(), // Preço por noite em centavos
+  capacity: integer("capacity").notNull(), // Número de pessoas
+  bedrooms: integer("bedrooms"),
+  bathrooms: integer("bathrooms"),
+  pricePerNight: integer("pricePerNight").notNull(), // Preço por noite em centavos
   rules: text("rules"), // Regras do imóvel
   amenities: text("amenities"), // JSON string com comodidades
   images: text("images"), // JSON string com URLs das imagens
-  status: mysqlEnum("status", ["active", "inactive", "pending"]).default("active").notNull(),
+  status: propertyStatusEnum("status").default("active").notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
 });
 
 export type Property = typeof properties.$inferSelect;
@@ -56,64 +60,66 @@ export type InsertProperty = typeof properties.$inferInsert;
 /**
  * Reservas feitas pelos locatários
  */
-export const bookings = mysqlTable("bookings", {
-  id: int("id").autoincrement().primaryKey(),
-  propertyId: int("propertyId").notNull(), // FK to properties
-  guestId: int("guestId").notNull(), // FK to users (locatário)
+export const bookingStatusEnum = pgEnum("booking_status", [
+  "pending",
+  "confirmed",
+  "checked_in",
+  "checked_out",
+  "completed",
+  "cancelled_by_guest",
+  "cancelled_by_owner",
+  "disputed"
+]);
+
+export const bookings = pgTable("bookings", {
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+  propertyId: integer("propertyId").notNull(),
+  guestId: integer("guestId").notNull(), // FK to users
   checkIn: timestamp("checkIn").notNull(),
   checkOut: timestamp("checkOut").notNull(),
-  totalAmount: int("totalAmount").notNull(), // Valor total em centavos
-  depositAmount: int("depositAmount").notNull(), // 10% do valor total em centavos
+  totalAmount: integer("totalAmount").notNull(), // Valor total em centavos
+  depositAmount: integer("depositAmount").notNull(), // 10% do valor total
   depositPaid: boolean("depositPaid").default(false).notNull(),
   depositPaidAt: timestamp("depositPaidAt"),
+  fullPaymentAmount: integer("fullPaymentAmount").notNull(), // 90% restante
   fullPaymentPaid: boolean("fullPaymentPaid").default(false).notNull(),
   fullPaymentPaidAt: timestamp("fullPaymentPaidAt"),
-  depositReturned: boolean("depositReturned").default(false).notNull(),
-  depositReturnedAt: timestamp("depositReturnedAt"),
-  status: mysqlEnum("status", [
-    "pending", // Aguardando pagamento dos 10%
-    "confirmed", // 10% pago, aguardando check-in
-    "checked_in", // Check-in confirmado
-    "checked_out", // Check-out confirmado
-    "completed", // Finalizado (10% devolvido)
-    "cancelled_by_guest", // Cancelado pelo locatário
-    "cancelled_by_owner", // Cancelado pelo proprietário
-    "disputed" // Em disputa
-  ]).default("pending").notNull(),
+  depositRefunded: boolean("depositRefunded").default(false).notNull(),
+  depositRefundedAt: timestamp("depositRefundedAt"),
+  status: bookingStatusEnum("status").default("pending").notNull(),
+  // Check-in/Check-out confirmations
   guestCheckInConfirmed: boolean("guestCheckInConfirmed").default(false).notNull(),
   ownerCheckInConfirmed: boolean("ownerCheckInConfirmed").default(false).notNull(),
   guestCheckOutConfirmed: boolean("guestCheckOutConfirmed").default(false).notNull(),
   ownerCheckOutConfirmed: boolean("ownerCheckOutConfirmed").default(false).notNull(),
-  problemReported: boolean("problemReported").default(false).notNull(),
-  problemDescription: text("problemDescription"),
+  // Problemas reportados
+  hasIssues: boolean("hasIssues").default(false).notNull(),
+  issueDescription: text("issueDescription"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
 });
 
 export type Booking = typeof bookings.$inferSelect;
 export type InsertBooking = typeof bookings.$inferInsert;
 
 /**
- * Pagamentos realizados na plataforma
+ * Pagamentos (taxa de R$ 299,99 dos proprietários e depósitos dos locatários)
  */
-export const payments = mysqlTable("payments", {
-  id: int("id").autoincrement().primaryKey(),
-  userId: int("userId").notNull(), // FK to users
-  bookingId: int("bookingId"), // FK to bookings (null para pagamento de premium)
-  type: mysqlEnum("type", [
-    "premium_subscription", // R$ 299,99 do proprietário
-    "booking_deposit", // 10% da reserva
-    "booking_full", // Pagamento total da estadia
-    "deposit_refund", // Devolução dos 10%
-    "cancellation_penalty" // Penalidade de cancelamento
-  ]).notNull(),
-  amount: int("amount").notNull(), // Valor em centavos
-  status: mysqlEnum("status", ["pending", "completed", "failed", "refunded"]).default("pending").notNull(),
+export const paymentTypeEnum = pgEnum("payment_type", ["premium_upgrade", "deposit", "full_payment", "refund"]);
+export const paymentStatusEnum = pgEnum("payment_status", ["pending", "completed", "failed", "refunded"]);
+
+export const payments = pgTable("payments", {
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+  userId: integer("userId").notNull(), // FK to users
+  bookingId: integer("bookingId"), // Null para premium upgrade
+  type: paymentTypeEnum("type").notNull(),
+  amount: integer("amount").notNull(), // Em centavos
+  status: paymentStatusEnum("status").default("pending").notNull(),
   paymentMethod: varchar("paymentMethod", { length: 50 }),
-  transactionId: varchar("transactionId", { length: 255 }), // ID da transação no gateway
-  gatewayResponse: text("gatewayResponse"), // JSON com resposta do gateway
+  transactionId: varchar("transactionId", { length: 255 }),
+  metadata: text("metadata"), // JSON string com dados adicionais
   createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
 });
 
 export type Payment = typeof payments.$inferSelect;
@@ -122,15 +128,16 @@ export type InsertPayment = typeof payments.$inferInsert;
 /**
  * Avaliações dos imóveis
  */
-export const reviews = mysqlTable("reviews", {
-  id: int("id").autoincrement().primaryKey(),
-  propertyId: int("propertyId").notNull(), // FK to properties
-  bookingId: int("bookingId").notNull(), // FK to bookings
-  guestId: int("guestId").notNull(), // FK to users
-  rating: int("rating").notNull(), // 1-5
+export const reviews = pgTable("reviews", {
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+  propertyId: integer("propertyId").notNull(),
+  bookingId: integer("bookingId").notNull(),
+  guestId: integer("guestId").notNull(),
+  rating: integer("rating").notNull(), // 1-5 estrelas
   comment: text("comment"),
+  response: text("response"), // Resposta do proprietário
   createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
 });
 
 export type Review = typeof reviews.$inferSelect;
@@ -139,14 +146,14 @@ export type InsertReview = typeof reviews.$inferInsert;
 /**
  * Calendário de disponibilidade dos imóveis
  */
-export const availability = mysqlTable("availability", {
-  id: int("id").autoincrement().primaryKey(),
-  propertyId: int("propertyId").notNull(), // FK to properties
+export const availability = pgTable("availability", {
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+  propertyId: integer("propertyId").notNull(),
   date: timestamp("date").notNull(),
   available: boolean("available").default(true).notNull(),
-  reason: varchar("reason", { length: 255 }), // Motivo do bloqueio (reserva, manutenção, etc)
+  priceOverride: integer("priceOverride"), // Preço especial para esta data (em centavos)
   createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
 });
 
 export type Availability = typeof availability.$inferSelect;
@@ -155,22 +162,13 @@ export type InsertAvailability = typeof availability.$inferInsert;
 /**
  * Notificações para usuários
  */
-export const notifications = mysqlTable("notifications", {
-  id: int("id").autoincrement().primaryKey(),
-  userId: int("userId").notNull(), // FK to users
+export const notifications = pgTable("notifications", {
+  id: integer("id").primaryKey().generatedAlwaysAsIdentity(),
+  userId: integer("userId").notNull(),
   title: varchar("title", { length: 255 }).notNull(),
   message: text("message").notNull(),
-  type: mysqlEnum("type", [
-    "booking_request",
-    "booking_confirmed",
-    "payment_received",
-    "check_in_reminder",
-    "check_out_reminder",
-    "review_request",
-    "problem_reported",
-    "general"
-  ]).notNull(),
   read: boolean("read").default(false).notNull(),
+  metadata: text("metadata"), // JSON string com dados adicionais
   createdAt: timestamp("createdAt").defaultNow().notNull(),
 });
 

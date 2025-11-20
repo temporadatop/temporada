@@ -105,8 +105,14 @@
 - [x] Integrar slogan "TemporadaTOP - salvando a sua temporada!!!" em toda interface
 
 ## 🔄 GitHub & Deploy
-- [ ] Configurar repositório GitHub
-- [ ] Fazer push inicial do código
+- [x] Configurar repositório GitHub
+- [x] Fazer push inicial do código
 - [ ] Configurar Render para backend
 - [ ] Configurar Render para frontend
-- [ ] Documentar variáveis de ambiente
+- [x] Documentar variáveis de ambiente
+
+## 🔄 Conversão PostgreSQL
+- [x] Converter schema de MySQL para PostgreSQL
+- [x] Atualizar drizzle.config.ts para PostgreSQL
+- [x] Atualizar server/db.ts para PostgreSQL
+- [ ] Fazer push para GitHub
