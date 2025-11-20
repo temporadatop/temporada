@@ -140,4 +140,8 @@
 
 ## 🎨 Ajuste Logo Hero
 - [x] Remover logo grande do Hero section
+- [x] Fazer push para GitHub
+
+## 🎨 Ajuste Altura Hero
+- [x] Reduzir padding vertical do Hero section
 - [ ] Fazer push para GitHub
