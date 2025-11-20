@@ -69,10 +69,7 @@ export default function Home() {
         
         <div className="container relative">
           <div className="flex flex-col items-center text-center">
-            {/* Logo grande acima do slogan */}
-            <img src={APP_LOGO} alt={APP_TITLE} className="h-32 w-32 mb-8 drop-shadow-2xl" />
-            
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-white backdrop-blur-sm">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-white backdrop-blur-sm">
               <Sparkles className="h-4 w-4" />
               <span className="text-sm font-semibold">Plataforma de Aluguel de Temporada</span>
             </div>

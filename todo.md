@@ -137,3 +137,7 @@
 - [x] Adicionar seção com 3 fotos entre Hero e Como Funciona
 - [x] Criar badges "Disponível para Natal/Réveillon/Carnaval"
 - [x] Fazer push para GitHub
+
+## 🎨 Ajuste Logo Hero
+- [x] Remover logo grande do Hero section
+- [ ] Fazer push para GitHub
