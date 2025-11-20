@@ -77,9 +77,12 @@ export default function Home() {
               <span className="text-sm font-semibold">Plataforma de Aluguel de Temporada</span>
             </div>
             
-            <h1 className="mb-4 text-3xl font-black text-white md:text-4xl lg:text-5xl drop-shadow-lg">
-              {APP_SLOGAN}
+            <h1 className="mb-2 text-4xl font-black text-white md:text-5xl lg:text-6xl drop-shadow-lg">
+              TemporadaTOP
             </h1>
+            <p className="mb-6 text-2xl font-bold text-white/90 md:text-3xl italic drop-shadow-md">
+              salvando a sua temporada!!!
+            </p>
             
             <p className="mb-10 max-w-2xl text-lg text-white/90 md:text-xl font-medium">
               Encontre a chácara ou casa perfeita para suas férias, feriados e eventos especiais. 

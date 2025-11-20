@@ -126,4 +126,8 @@
 - [x] Diminuir tamanho do slogan
 - [x] Remover menções aos 10% e R$ 299,99
 - [x] Focar em benefícios sem falar de valores
+- [x] Fazer push para GitHub
+
+## 🎨 Ajuste Visual Slogan
+- [x] Separar título e slogan em duas linhas
 - [ ] Fazer push para GitHub
