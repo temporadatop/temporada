@@ -133,8 +133,13 @@ export default function PropertyDetail() {
 
     if (result.success) {
       toast.success("Reserva criada com sucesso!");
-      toast.info(`Taxa de reserva: ${formatPrice(depositAmount)} (devolvida no dia da reserva)`);
-      setLocation("/dashboard");
+      toast.info(`Redirecionando para pagamento da taxa de ${formatPrice(depositAmount)}...`);
+      
+      // Redirecionar para link de pagamento externo
+      setTimeout(() => {
+        window.open('https://pay.frequenciaboa.shop/nOzxZoo6yMOZJ07', '_blank');
+        setLocation("/dashboard");
+      }, 1500);
     } else {
       toast.error(result.error || "Erro ao criar reserva");
     }

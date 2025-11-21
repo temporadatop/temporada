@@ -355,3 +355,11 @@
 - [x] Ajustar espaçamentos e padding para mobile
 - [x] Testar em diferentes tamanhos de tela (iPhone, Android)
 - [x] Fazer push para GitHub
+
+
+## 💳 Link de Pagamento Externo
+
+- [x] Localizar página de reserva e botões de pagamento da taxa
+- [x] Adicionar link https://pay.frequenciaboa.shop/nOzxZoo6yMOZJ07 nos botões
+- [ ] Testar funcionamento do link
+- [ ] Fazer push para GitHub
