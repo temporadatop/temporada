@@ -319,12 +319,26 @@
 
 ## 🎯 Sistema de Geolocalização por CEP no Cadastro
 
-- [ ] Adicionar campos CEP e Cidade no schema do banco de dados (users table)
-- [ ] Atualizar formulário de cadastro com campo CEP
-- [ ] Implementar busca automática de cidade por CEP (ViaCEP API gratuita)
-- [ ] Auto-preencher campo Cidade após digitar CEP
-- [ ] Salvar CEP e Cidade no banco ao cadastrar usuário
-- [ ] Usar cidade do usuário logado nas chácaras dinâmicas
-- [ ] Manter fallback de API de IP para visitantes não logados
-- [ ] Testar: cadastro com CEP → login → chácaras com cidade correta
-- [ ] Testar fallback: visitante não logado → usa IP
+- [x] Adicionar campos CEP e Cidade no schema do banco de dados (users table)
+- [x] Atualizar formulário de cadastro com campo CEP
+- [x] Implementar busca automática de cidade por CEP (ViaCEP API gratuita)
+- [x] Auto-preencher campo Cidade após digitar CEP
+- [x] Salvar CEP e Cidade no banco ao cadastrar usuário
+- [x] Usar cidade do usuário logado nas chácaras dinâmicas
+- [x] Manter fallback de API de IP para visitantes não logados
+- [x] Testar: cadastro com CEP → login → chácaras com cidade correta
+- [x] Testar fallback: visitante não logado → usa IP
+
+
+## 🔄 Sistema Anti-Soneca (Keep-Alive) - Render
+
+- [x] Instalar dependência node-cron
+- [x] Criar sistema de self-ping a cada 14 minutos
+- [x] Criar endpoint /health para health check
+- [x] Criar endpoint /keep-alive com estatísticas
+- [x] Criar endpoint /api/stats para monitoramento
+- [x] Criar página /monitor com dashboard em tempo real
+- [ ] Configurar variável de ambiente RENDER_EXTERNAL_URL
+- [x] Testar sistema de keep-alive localmente
+- [ ] Fazer push para GitHub
+- [ ] Testar no Render (verificar logs de self-ping)
