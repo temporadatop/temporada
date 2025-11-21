@@ -354,4 +354,4 @@
 - [x] Ajustar tamanhos de fonte para telas pequenas
 - [x] Ajustar espaçamentos e padding para mobile
 - [x] Testar em diferentes tamanhos de tela (iPhone, Android)
-- [ ] Fazer push para GitHub
+- [x] Fazer push para GitHub
