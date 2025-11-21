@@ -2,6 +2,7 @@ import "dotenv/config";
 import express from "express";
 import { createServer } from "http";
 import net from "net";
+import http from "http";
 import https from "https";
 import cron from "node-cron";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
@@ -242,7 +243,10 @@ async function startServer() {
       const now = new Date().toISOString();
       console.log(`[CRON] Self-ping iniciado em ${now}`);
       
-      https.get(`${renderUrl}/keep-alive`, (res) => {
+      const isHttps = renderUrl.startsWith('https');
+      const httpModule = isHttps ? https : http;
+      
+      httpModule.get(`${renderUrl}/keep-alive`, (res) => {
         console.log(`[CRON] Self-ping bem-sucedido! Status: ${res.statusCode}`);
       }).on('error', (err) => {
         console.error(`[CRON] Erro no self-ping:`, err.message);

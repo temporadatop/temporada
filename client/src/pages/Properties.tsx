@@ -88,31 +88,31 @@ export default function Properties() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b border-gray-200">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-3 md:py-4">
           <div className="flex items-center justify-between">
             <Link href="/">
-              <div className="flex items-center gap-3 cursor-pointer">
-                <img src={APP_LOGO} alt={APP_TITLE} className="h-10 w-10" />
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+              <div className="flex items-center gap-2 md:gap-3 cursor-pointer">
+                <img src={APP_LOGO} alt={APP_TITLE} className="h-8 w-8 md:h-10 md:w-10" />
+                <h1 className="text-lg md:text-2xl font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
                   {APP_TITLE}
                 </h1>
               </div>
             </Link>
-            <nav className="flex gap-4">
-              <Link href="/"><Button variant="ghost">Início</Button></Link>
-              <Link href="/properties"><Button variant="default">Imóveis</Button></Link>
+            <nav className="flex gap-2 md:gap-4">
+              <Link href="/"><Button variant="ghost" size="sm" className="text-xs md:text-sm">Início</Button></Link>
+              <Link href="/properties"><Button variant="default" size="sm" className="text-xs md:text-sm">Imóveis</Button></Link>
             </nav>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-4 md:py-8">
         {/* Filtros */}
-        <Card className="mb-8">
+        <Card className="mb-6 md:mb-8">
           <CardHeader>
-            <CardTitle>Filtrar Imóveis</CardTitle>
-            <CardDescription>Encontre a chácara perfeita para sua temporada</CardDescription>
+            <CardTitle className="text-lg md:text-xl">Filtrar Imóveis</CardTitle>
+            <CardDescription className="text-sm md:text-base">Encontre a chácara perfeita para sua temporada</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -171,17 +171,17 @@ export default function Properties() {
         </Card>
 
         {/* Lista de Propriedades */}
-        <div className="mb-6">
-          <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+        <div className="mb-4 md:mb-6">
+          <h2 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
             Imóveis Disponíveis{city && ` próximo da Região de ${city}`}
           </h2>
-          <p className="text-gray-600">{filteredProperties.length} imóveis encontrados</p>
+          <p className="text-sm md:text-base text-gray-600">{filteredProperties.length} imóveis encontrados</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {filteredProperties.map((property) => (
             <Card key={property.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 md:h-48 overflow-hidden">
                 <img
                   src={property.photos[0]}
                   alt={property.name}
@@ -192,7 +192,7 @@ export default function Properties() {
                 />
                 {/* Badge para chácaras dinâmicas (ID >= 1000) */}
                 {property.id >= 1000 && (
-                  <div className="absolute top-3 left-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg">
+                  <div className="absolute top-2 md:top-3 left-2 md:left-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-2 md:px-3 py-1 md:py-1.5 rounded-full text-xs md:text-sm font-semibold shadow-lg">
                     🏡 Chácara até 10km de você
                   </div>
                 )}

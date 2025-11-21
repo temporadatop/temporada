@@ -90,13 +90,13 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50 flex items-center justify-center p-3 md:p-4">
       <div className="w-full max-w-md">
         {/* Logo */}
         <Link href="/">
-          <div className="flex items-center justify-center gap-3 mb-8 cursor-pointer">
-            <img src={APP_LOGO} alt={APP_TITLE} className="h-12 w-12" />
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+          <div className="flex items-center justify-center gap-2 md:gap-3 mb-6 md:mb-8 cursor-pointer">
+            <img src={APP_LOGO} alt={APP_TITLE} className="h-10 w-10 md:h-12 md:w-12" />
+            <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">
               {APP_TITLE}
             </h1>
           </div>

@@ -342,3 +342,16 @@
 - [x] Testar sistema de keep-alive localmente
 - [x] Fazer push para GitHub
 - [ ] Testar no Render (verificar logs de self-ping)
+
+
+## 📱 Otimização Mobile
+
+- [x] Otimizar landing page para mobile (hero, cards, seções)
+- [x] Otimizar página de listagem de propriedades para mobile
+- [ ] Otimizar página de detalhes da propriedade para mobile
+- [x] Otimizar formulários de login/cadastro para mobile
+- [ ] Otimizar dashboard de reservas para mobile
+- [x] Ajustar tamanhos de fonte para telas pequenas
+- [x] Ajustar espaçamentos e padding para mobile
+- [x] Testar em diferentes tamanhos de tela (iPhone, Android)
+- [ ] Fazer push para GitHub
