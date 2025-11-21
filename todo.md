@@ -306,3 +306,12 @@
 - [x] Investigar API de geolocalização mostrando "São Paulo" ao invés de "Campinas"
 - [x] Adicionar logs de debug para geolocalização
 - [x] Testar página de detalhes com chácaras dinâmicas
+
+
+## 🌍 Melhorar Precisão da Geolocalização
+
+- [x] Pesquisar APIs de geolocalização mais precisas que ipapi.co
+- [x] Testar APIs alternativas: ip-api.com, ipgeolocation.io, ipinfo.io
+- [x] Implementar API mais precisa que detecte cidade real (Campinas, São José do Rio Pardo)
+- [ ] Testar com IPs de diferentes cidades do interior paulista
+- [ ] Verificar se detecta corretamente em computador e celular

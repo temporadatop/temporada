@@ -10,7 +10,7 @@ interface GeolocationData {
 
 /**
  * Hook para detectar a localização do usuário baseado no IP
- * Usa a API gratuita ipapi.co (sem necessidade de chave)
+ * Usa a API gratuita ip-api.com (mais precisa, sem necessidade de chave)
  */
 export function useGeolocation(): GeolocationData {
   const [data, setData] = useState<GeolocationData>({
@@ -45,8 +45,8 @@ export function useGeolocation(): GeolocationData {
       }
     }
 
-    // Buscar localização via API
-    fetch('https://ipapi.co/json/')
+    // Buscar localização via API (ip-api.com é mais precisa que ipapi.co)
+    fetch('http://ip-api.com/json/?fields=status,message,country,regionName,city')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch geolocation');
@@ -55,10 +55,16 @@ export function useGeolocation(): GeolocationData {
       })
       .then((result) => {
         console.log('[Geolocation] API Response:', result);
+        
+        // Verificar se a API retornou sucesso
+        if (result.status !== 'success') {
+          throw new Error(result.message || 'Geolocation failed');
+        }
+        
         const locationData = {
           city: result.city || null,
-          region: result.region || null,
-          country: result.country_name || null,
+          region: result.regionName || null,
+          country: result.country || null,
           timestamp: Date.now(),
         };
         console.log('[Geolocation] Detected city:', locationData.city);
