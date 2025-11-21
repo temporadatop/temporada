@@ -309,6 +309,11 @@ export default function PropertyDetail() {
                             <span className="font-bold text-green-600">Com 50% OFF</span>
                             <span className="font-bold text-green-600 text-lg">{formatPrice(totalPrice * 0.5)}</span>
                           </div>
+                          <div className="mt-3 p-3 bg-green-50 border-2 border-green-500 rounded-lg">
+                            <p className="text-sm font-bold text-green-700 text-center">
+                              O valor das estadias você SÓ PAGA quando entrar no IMÓVEL!!!
+                            </p>
+                          </div>
                         </>
                       ) : (
                         <div className="flex justify-between">
@@ -317,22 +322,32 @@ export default function PropertyDetail() {
                         </div>
                       )}
                     </div>
-                    <div className="flex justify-between text-sm text-gray-600">
-                      <span>Taxa de reserva</span>
-                      <span>{formatPrice(depositAmount)}</span>
+                    <div className="border-t pt-3 mt-3">
+                      <div className="flex justify-between text-sm font-semibold">
+                        <span>Taxa de reserva</span>
+                        <span className="text-orange-600">{formatPrice(depositAmount)}</span>
+                      </div>
+                      <p className="text-xs font-bold text-orange-600 mt-1">
+                        (Único valor a pagar no momento)
+                      </p>
+                      <div className="mt-2 space-y-1">
+                        <p className="text-xs text-gray-600">
+                          * A taxa de reserva será devolvida no dia da reserva
+                        </p>
+                        <p className="text-xs text-gray-600">
+                          * Este é o único valor a pagar para garantir a sua reserva
+                        </p>
+                      </div>
                     </div>
-                    <p className="text-xs text-gray-500 mt-2">
-                      * A taxa de reserva será devolvida no dia da reserva
-                    </p>
                   </div>
                 )}
 
                 <Button
-                  className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600"
+                  className="w-full bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-lg font-bold py-6"
                   onClick={handleReservation}
                   disabled={!checkIn || !checkOut}
                 >
-                  {isAuthenticated ? "Reservar" : "Fazer Login para Reservar"}
+                  {isAuthenticated ? "Reservar por apenas R$ 79,90" : "Fazer Login para Reservar"}
                 </Button>
 
                 {!isAuthenticated && (

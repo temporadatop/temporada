@@ -261,3 +261,22 @@
 - [x] Mostrar valor original riscado em vermelho quando cupom está ativo
 - [x] Exibir valor com desconto em destaque abaixo do valor original
 - [x] Melhorar visualização do desconto na página de reserva
+
+
+## 🐛 Erro 502 no Render
+
+- [ ] Verificar configuração de porta no servidor
+- [ ] Verificar variáveis de ambiente necessárias
+- [ ] Verificar se o build está funcionando corretamente
+- [ ] Testar deploy local antes de fazer push
+
+- [x] Remover botões "Dashboard" e "Imóveis" do header da landing page
+- [x] Manter apenas logo, "Entrar" e "Cadastrar"
+
+
+## 🎨 Melhorias na Página de Reserva
+
+- [x] Adicionar texto em verde forte abaixo do valor com desconto: "O valor das estadias você SÓ PAGA quando entrar no IMÓVEL!!!"
+- [x] Atualizar texto da taxa de reserva para "R$ 79,90 (Único valor a pagar no momento)"
+- [x] Adicionar explicação: "Este é o único valor a pagar para garantir a sua reserva"
+- [x] Mudar botão "Reservar" para "Reservar por apenas R$ 79,90"

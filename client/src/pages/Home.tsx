@@ -40,27 +40,14 @@ export default function Home() {
           </Link>
           
           <nav className="flex items-center gap-4">
-            {isAuthenticated ? (
-              <>
-                <Link href="/dashboard">
-                  <Button variant="ghost">Dashboard</Button>
-                </Link>
-                <Link href="/properties">
-                  <Button variant="ghost">Imóveis</Button>
-                </Link>
-              </>
-            ) : (
-              <>
-                <Link href="/login">
-                  <Button variant="ghost">Entrar</Button>
-                </Link>
-                <Link href="/login">
-                  <Button className="bg-gradient-to-r from-[#FF7A00] to-[#FF2E63] hover:opacity-90">
-                    Cadastrar
-                  </Button>
-                </Link>
-              </>
-            )}
+            <Link href="/login">
+              <Button variant="ghost">Entrar</Button>
+            </Link>
+            <Link href="/login">
+              <Button className="bg-gradient-to-r from-[#FF7A00] to-[#FF2E63] hover:opacity-90">
+                Cadastrar
+              </Button>
+            </Link>
           </nav>
         </div>
       </header>
