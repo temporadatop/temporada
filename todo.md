@@ -315,3 +315,16 @@
 - [x] Implementar API mais precisa que detecte cidade real (Campinas, São José do Rio Pardo)
 - [ ] Testar com IPs de diferentes cidades do interior paulista
 - [ ] Verificar se detecta corretamente em computador e celular
+
+
+## 🎯 Sistema de Geolocalização por CEP no Cadastro
+
+- [ ] Adicionar campos CEP e Cidade no schema do banco de dados (users table)
+- [ ] Atualizar formulário de cadastro com campo CEP
+- [ ] Implementar busca automática de cidade por CEP (ViaCEP API gratuita)
+- [ ] Auto-preencher campo Cidade após digitar CEP
+- [ ] Salvar CEP e Cidade no banco ao cadastrar usuário
+- [ ] Usar cidade do usuário logado nas chácaras dinâmicas
+- [ ] Manter fallback de API de IP para visitantes não logados
+- [ ] Testar: cadastro com CEP → login → chácaras com cidade correta
+- [ ] Testar fallback: visitante não logado → usa IP

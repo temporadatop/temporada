@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { getCurrentUser } from '@/lib/auth';
 
 interface GeolocationData {
   city: string | null;
@@ -9,8 +10,10 @@ interface GeolocationData {
 }
 
 /**
- * Hook para detectar a localização do usuário baseado no IP
- * Usa a API gratuita ip-api.com (mais precisa, sem necessidade de chave)
+ * Hook para detectar a localização do usuário
+ * Prioridade:
+ * 1. Cidade do usuário logado (do cadastro)
+ * 2. API de IP (fallback para visitantes não logados)
  */
 export function useGeolocation(): GeolocationData {
   const [data, setData] = useState<GeolocationData>({
@@ -22,7 +25,21 @@ export function useGeolocation(): GeolocationData {
   });
 
   useEffect(() => {
-    // Verificar se já temos dados em cache (localStorage)
+    // PRIORIDADE 1: Verificar se usuário está logado e tem cidade no cadastro
+    const currentUser = getCurrentUser();
+    if (currentUser && currentUser.city) {
+      console.log('[Geolocation] Using logged user city:', currentUser.city);
+      setData({
+        city: currentUser.city,
+        region: currentUser.state || null,
+        country: 'Brasil',
+        loading: false,
+        error: false,
+      });
+      return;
+    }
+
+    // PRIORIDADE 2: Verificar se já temos dados em cache (localStorage)
     const cachedData = localStorage.getItem('geolocation');
     if (cachedData) {
       try {

@@ -23,6 +23,40 @@ export default function Login() {
   const [registerPassword, setRegisterPassword] = useState("");
   const [registerPhone, setRegisterPhone] = useState("");
   const [registerCpf, setRegisterCpf] = useState("");
+  const [registerCep, setRegisterCep] = useState("");
+  const [registerCity, setRegisterCity] = useState("");
+  const [registerState, setRegisterState] = useState("");
+  const [loadingCep, setLoadingCep] = useState(false);
+
+  // Buscar cidade por CEP usando ViaCEP API
+  const handleCepChange = async (cep: string) => {
+    setRegisterCep(cep);
+    
+    // Remove caracteres não numéricos
+    const cleanCep = cep.replace(/\D/g, '');
+    
+    // CEP completo tem 8 dígitos
+    if (cleanCep.length === 8) {
+      setLoadingCep(true);
+      try {
+        const response = await fetch(`https://viacep.com.br/ws/${cleanCep}/json/`);
+        const data = await response.json();
+        
+        if (!data.erro) {
+          setRegisterCity(data.localidade);
+          setRegisterState(data.uf);
+          toast.success(`Cidade detectada: ${data.localidade}, ${data.uf}`);
+        } else {
+          toast.error('CEP não encontrado');
+        }
+      } catch (error) {
+        console.error('Erro ao buscar CEP:', error);
+        toast.error('Erro ao buscar CEP');
+      } finally {
+        setLoadingCep(false);
+      }
+    }
+  };
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,8 +74,12 @@ export default function Login() {
     const result = await register({
       name: registerName,
       email: registerEmail,
+      password: registerPassword,
       phone: registerPhone,
       cpf: registerCpf,
+      cep: registerCep,
+      city: registerCity,
+      state: registerState,
     });
     if (result.success) {
       toast.success("Cadastro realizado com sucesso!");
@@ -174,6 +212,32 @@ export default function Login() {
                       value={registerCpf}
                       onChange={(e) => setRegisterCpf(e.target.value)}
                       required
+                    />
+                  </div>
+                  <div>
+                    <Label htmlFor="register-cep">CEP</Label>
+                    <Input
+                      id="register-cep"
+                      type="text"
+                      placeholder="00000-000"
+                      value={registerCep}
+                      onChange={(e) => handleCepChange(e.target.value)}
+                      required
+                      disabled={loadingCep}
+                    />
+                    {loadingCep && <p className="text-sm text-gray-500 mt-1">Buscando cidade...</p>}
+                  </div>
+                  <div>
+                    <Label htmlFor="register-city">Cidade</Label>
+                    <Input
+                      id="register-city"
+                      type="text"
+                      placeholder="Cidade"
+                      value={registerCity}
+                      onChange={(e) => setRegisterCity(e.target.value)}
+                      required
+                      readOnly
+                      className="bg-gray-50"
                     />
                   </div>
                   <Button

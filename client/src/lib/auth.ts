@@ -4,8 +4,12 @@ export interface User {
   id: string;
   name: string;
   email: string;
+  password: string;
   phone: string;
   cpf: string;
+  cep?: string;
+  city?: string;
+  state?: string;
   createdAt: string;
 }
 
@@ -61,6 +65,11 @@ export function login(email: string, password: string): { success: boolean; erro
   const user = users.find(u => u.email === email);
   
   if (!user) {
+    return { success: false, error: 'Email ou senha incorretos' };
+  }
+  
+  // Verificar senha
+  if (user.password !== password) {
     return { success: false, error: 'Email ou senha incorretos' };
   }
   
