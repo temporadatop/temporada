@@ -340,5 +340,5 @@
 - [x] Criar página /monitor com dashboard em tempo real
 - [ ] Configurar variável de ambiente RENDER_EXTERNAL_URL
 - [x] Testar sistema de keep-alive localmente
-- [ ] Fazer push para GitHub
+- [x] Fazer push para GitHub
 - [ ] Testar no Render (verificar logs de self-ping)
