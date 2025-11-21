@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -8,7 +8,8 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { MapPin, Users, Bed, Bath, Star, Gift, Copy, Check } from "lucide-react";
 import { Link } from "wouter";
 import { APP_LOGO, APP_TITLE } from "@/const";
-import { properties } from "@/data/properties";
+import { properties, Property } from "@/data/properties";
+import { dynamicProperties } from "@/data/dynamicProperties";
 import { useGeolocation } from "@/hooks/useGeolocation";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { toast } from "sonner";
@@ -49,8 +50,21 @@ export default function Properties() {
     setTimeout(() => setCopiedCoupon(false), 2000);
   };
 
+  // Combinar propriedades dinâmicas (com cidade do usuário) + propriedades fixas
+  const allProperties: Property[] = useMemo(() => {
+    // Criar propriedades dinâmicas com a cidade do usuário
+    const dynamicPropsWithLocation = dynamicProperties.map((prop, index) => ({
+      ...prop,
+      id: 1000 + index, // IDs especiais para chácaras dinâmicas
+      location: city ? `${city}, SP` : "São Paulo, SP",
+    }));
+    
+    // Chácaras dinâmicas no TOPO + chácaras fixas
+    return [...dynamicPropsWithLocation, ...properties];
+  }, [city]);
+  
   // Filtrar propriedades
-  const filteredProperties = properties.filter(property => {
+  const filteredProperties = allProperties.filter(property => {
     if (filters.city && !property.location.toLowerCase().includes(filters.city.toLowerCase())) {
       return false;
     }
@@ -176,6 +190,12 @@ export default function Properties() {
                     e.currentTarget.src = "https://placehold.co/400x300/FF7A00/FFFFFF?text=Imóvel";
                   }}
                 />
+                {/* Badge para chácaras dinâmicas (ID >= 1000) */}
+                {property.id >= 1000 && (
+                  <div className="absolute top-3 left-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-3 py-1.5 rounded-full text-sm font-semibold shadow-lg">
+                    🏡 Chácara até 10km de você
+                  </div>
+                )}
               </div>
               <CardHeader>
                 <CardTitle className="text-lg">{property.name}</CardTitle>

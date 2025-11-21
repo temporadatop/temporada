@@ -280,3 +280,20 @@
 - [x] Atualizar texto da taxa de reserva para "R$ 79,90 (Único valor a pagar no momento)"
 - [x] Adicionar explicação: "Este é o único valor a pagar para garantir a sua reserva"
 - [x] Mudar botão "Reservar" para "Reservar por apenas R$ 79,90"
+
+
+## 🌍 Chácaras Dinâmicas com Geolocalização
+
+- [x] Receber 7 chácaras com fotos e descrições do usuário
+  - Chácara do Diego (6 fotos)
+  - Chácara da Ana (5 fotos)
+  - Cantinho Céu Azul (1 foto)
+  - Chácara da Vovó Mafalda (3 fotos)
+  - Espaço Familiar da Bianca (0 fotos)
+  - Recanto do Amor (1 foto)
+  - Chalé das Flores (1 foto)
+- [x] Criar sistema de chácaras dinâmicas que mudam cidade baseado no IP
+- [x] Adicionar badge "Chácara até 10km de você" (não clicável) na primeira foto
+- [x] Ordenar listagem: chácaras dinâmicas aparecem no TOPO
+- [x] Testar com diferentes IPs/localizações (Campinas, Rio Pardo, etc.)
+- [ ] Garantir que cidade muda automaticamente
