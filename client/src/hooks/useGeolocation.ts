@@ -54,12 +54,14 @@ export function useGeolocation(): GeolocationData {
         return response.json();
       })
       .then((result) => {
+        console.log('[Geolocation] API Response:', result);
         const locationData = {
           city: result.city || null,
           region: result.region || null,
           country: result.country_name || null,
           timestamp: Date.now(),
         };
+        console.log('[Geolocation] Detected city:', locationData.city);
 
         // Salvar no cache
         localStorage.setItem('geolocation', JSON.stringify(locationData));

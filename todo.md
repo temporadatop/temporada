@@ -297,3 +297,12 @@
 - [x] Ordenar listagem: chácaras dinâmicas aparecem no TOPO
 - [x] Testar com diferentes IPs/localizações (Campinas, Rio Pardo, etc.)
 - [ ] Garantir que cidade muda automaticamente
+
+
+## 🐛 Correções Urgentes
+
+- [x] Corrigir página "Imóvel não encontrado" ao clicar em chácaras dinâmicas
+- [x] Fazer página de detalhes suportar IDs dinâmicos (1000+)
+- [x] Investigar API de geolocalização mostrando "São Paulo" ao invés de "Campinas"
+- [x] Adicionar logs de debug para geolocalização
+- [x] Testar página de detalhes com chácaras dinâmicas

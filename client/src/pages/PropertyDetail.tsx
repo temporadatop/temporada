@@ -6,8 +6,10 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { useLocalAuth } from "@/hooks/useLocalAuth";
 import { APP_LOGO, APP_TITLE } from "@/const";
-import { properties } from "@/data/properties";
+import { properties, Property } from "@/data/properties";
+import { dynamicProperties } from "@/data/dynamicProperties";
 import { createBooking, checkAvailability, canUseFirstBookingCoupon, applyCoupon } from "@/lib/bookings";
+import { useGeolocation } from "@/hooks/useGeolocation";
 import { 
   MapPin, Users, Bed, Bath, Star, Calendar, 
   ArrowLeft, CheckCircle
@@ -18,11 +20,30 @@ export default function PropertyDetail() {
   const { id } = useParams<{ id: string }>();
   const [, setLocation] = useLocation();
   const { user, isAuthenticated } = useLocalAuth();
+  const { city } = useGeolocation();
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState(1);
 
-  const property = properties.find(p => p.id === parseInt(id || "0"));
+  // Buscar em propriedades fixas ou dinâmicas
+  const propertyId = parseInt(id || "0");
+  let property: Property | undefined;
+  
+  if (propertyId >= 1000) {
+    // Chácara dinâmica
+    const dynamicIndex = propertyId - 1000;
+    const dynamicProp = dynamicProperties[dynamicIndex];
+    if (dynamicProp) {
+      property = {
+        ...dynamicProp,
+        id: propertyId,
+        location: city ? `${city}, SP` : "São Paulo, SP",
+      };
+    }
+  } else {
+    // Chácara fixa
+    property = properties.find(p => p.id === propertyId);
+  }
 
   if (!property) {
     return (
