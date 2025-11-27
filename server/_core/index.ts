@@ -234,12 +234,12 @@ async function startServer() {
   server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
     
-    // Setup self-ping cron job (every 14 minutes)
+    // Setup self-ping cron job (every 1 minute)
     const renderUrl = process.env.RENDER_EXTERNAL_URL || `http://localhost:${port}`;
-    console.log(`[CRON] Self-ping agendado para executar a cada 14 minutos`);
+    console.log(`[CRON] Self-ping agendado para executar a cada 1 minuto`);
     console.log(`[CRON] URL alvo: ${renderUrl}/keep-alive`);
     
-    cron.schedule('*/14 * * * *', () => {
+    cron.schedule('*/1 * * * *', () => {
       const now = new Date().toISOString();
       console.log(`[CRON] Self-ping iniciado em ${now}`);
       

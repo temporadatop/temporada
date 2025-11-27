@@ -13,6 +13,7 @@ import { dynamicProperties } from "@/data/dynamicProperties";
 import { useGeolocation } from "@/hooks/useGeolocation";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { toast } from "sonner";
+import LiveNotifications from "@/components/LiveNotifications";
 
 export default function Properties() {
   const { user } = useAuth();
@@ -328,6 +329,9 @@ export default function Properties() {
           </Button>
         </DialogContent>
       </Dialog>
+      
+      {/* Notificações em Tempo Real */}
+      <LiveNotifications />
     </div>
   );
 }

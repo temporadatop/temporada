@@ -63,7 +63,7 @@ export function useGeolocation(): GeolocationData {
     }
 
     // Buscar localização via API (ip-api.com é mais precisa que ipapi.co)
-    fetch('http://ip-api.com/json/?fields=status,message,country,regionName,city')
+    fetch('https://ipapi.co/json/')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch geolocation');
@@ -73,15 +73,15 @@ export function useGeolocation(): GeolocationData {
       .then((result) => {
         console.log('[Geolocation] API Response:', result);
         
-        // Verificar se a API retornou sucesso
-        if (result.status !== 'success') {
-          throw new Error(result.message || 'Geolocation failed');
+        // Verificar se a API retornou erro
+        if (result.error) {
+          throw new Error(result.reason || 'Geolocation failed');
         }
         
         const locationData = {
           city: result.city || null,
-          region: result.regionName || null,
-          country: result.country || null,
+          region: result.region || null,
+          country: result.country_name || null,
           timestamp: Date.now(),
         };
         console.log('[Geolocation] Detected city:', locationData.city);

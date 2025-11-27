@@ -15,6 +15,7 @@ import {
   ArrowLeft, CheckCircle
 } from "lucide-react";
 import { toast } from "sonner";
+import UrgencyTimer from "@/components/UrgencyTimer";
 
 export default function PropertyDetail() {
   const { id } = useParams<{ id: string }>();
@@ -170,6 +171,9 @@ export default function PropertyDetail() {
           </div>
         </div>
       </header>
+      
+      {/* Contador de Urgência */}
+      <UrgencyTimer />
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8">
