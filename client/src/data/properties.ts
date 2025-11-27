@@ -559,4 +559,36 @@ export const properties: Property[] = [
     reviews_count: 1,
     photos: ["/properties/34/1.jpeg", "/properties/34/2.jpeg", "/properties/34/3.jpeg", "/properties/34/4.jpeg"]
   },
+  {
+    id: 35,
+    name: "Apartamento Guarujá Pitangueiras",
+    location: "Guarujá, SP",
+    description: "Apartamento completo na Praia de Pitangueiras! Top 1% dos anúncios do Airbnb. Impecável, limpo e organizado com todos os utensílios necessários. Perfeito para famílias que buscam excelência.\n\nO apartamento possui 3 quartos, 7 camas, 3 banheiros completos, sala espaçosa, cozinha equipada e completa. Ótima localização bem perto da praia, mercados e restaurantes. Prédio com mercadinho interno, ótima piscina e duas vagas de garagem. Serviço de praia disponível. Anfitriã Karla é Superhost com 10 meses de experiência. Avaliação perfeita 5.0 estrelas com 16 comentários!",
+    guests: 8,
+    bedrooms: 3,
+    beds: 7,
+    bathrooms: 3,
+    price_per_night: 580,
+    amenities: ["Top 1% Airbnb", "Superhost", "Piscina", "2 vagas garagem", "Serviço praia", "Mercadinho interno", "Próximo praia", "Cozinha completa", "Limpeza impecável", "Wi-Fi"],
+    owner_name: "Karla",
+    rating: 5.0,
+    reviews_count: 16,
+    photos: ["/properties/35/1.jpeg", "/properties/35/2.jpeg", "/properties/35/3.jpeg", "/properties/35/4.jpeg"]
+  },
+  {
+    id: 36,
+    name: "Apto Vista Panorâmica — Ed Verdemar",
+    location: "Guarujá, SP",
+    description: "Desfrute de uma estadia inesquecível no coração do Guarujá! Este elegante apartamento de 158 m² no Edifício Verdemar, localizado no Canto das Tortugas — a região mais nobre e tranquila da Praia da Enseada — combina conforto, sofisticação e uma vista espetacular do mar e da mata atlântica.\n\nO apartamento possui 3 suítes climatizadas com ar-condicionado split, 9 camas confortáveis (ideal para famílias e grupos), 3 vagas de garagem cobertas, varanda gourmet envidraçada com churrasqueira e vista panorâmica, sala ampla e iluminada, cozinha completa, lavanderia com máquina de lavar e Wi-Fi de alta velocidade. Anfitriao Victor tem 9 anos no Airbnb.",
+    guests: 8,
+    bedrooms: 3,
+    beds: 9,
+    bathrooms: 4,
+    price_per_night: 720,
+    amenities: ["Vista mar", "3 vagas garagem", "Churrasqueira", "Ar-condicionado", "Varanda gourmet", "Cozinha completa", "Máquina lavar", "Wi-Fi", "Região nobre", "158m²"],
+    owner_name: "Victor",
+    rating: 5.0,
+    reviews_count: 1,
+    photos: ["/properties/36/1.jpeg", "/properties/36/2.jpeg", "/properties/36/3.jpeg", "/properties/36/4.jpeg"]
+  },
 ];
