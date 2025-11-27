@@ -191,5 +191,21 @@ export const properties: Property[] = [
     rating: 5.0,
     reviews_count: 38,
     photos: ["/properties/chacara-11-foto-01.jpg", "/properties/chacara-11-foto-02.jpg", "/properties/chacara-11-foto-03.jpg", "/properties/chacara-11-foto-04.jpg", "/properties/chacara-11-foto-05.jpg"]
+  },
+  {
+    id: 1018,
+    name: "Espaço e Conforto para Grupos – Cacimba do Padre",
+    location: "Fernando de Noronha, PE",
+    description: "Bem-vindo à nossa pousada – sua casa no coração de Fernando de Noronha! Nossa pousada está localizada em uma área privilegiada da ilha, bem no centro, com fácil acesso a mercados, restaurantes, pontos de táxi e diversas praias. Um lugar ideal para quem deseja conforto, praticidade e boa localização durante a estadia.\n\nO espaço conta com 1 quarto aconchegante com cama de casal, cama de solteiro e beliche, acomodando confortavelmente até 5 hóspedes. Oferecemos aos nossos hóspedes uma cozinha equipada para que possam preparar suas refeições com liberdade e praticidade, incluindo cafeteira, frigobar, micro-ondas, sanduicheira e utensílios básicos.\n\nO que oferecemos: Transfer de cortesia (aeroporto → pousada e pousada → aeroporto), Wi-Fi gratuito, limpeza e conforto, suporte local para tirar dúvidas e dar dicas da ilha. A Vila dos Remédios é o bairro mais tradicional de Fernando de Noronha, com fácil acesso às praias urbanas (Praia do Cachorro, Praia do Meio e Praia da Conceição), patrimônio histórico e a melhor gastronomia da ilha!\n\nSe você busca uma estadia aconchegante, bem localizada e com liberdade para montar sua rotina na ilha, esta é a escolha certa!",
+    guests: 5,
+    bedrooms: 1,
+    beds: 3,
+    bathrooms: 1,
+    price_per_night: 1500,
+    amenities: ["Acesso à praia", "Cozinha", "Wi-Fi", "Espaço de trabalho", "Estacionamento", "Permitido animais", "TV", "Ar-condicionado", "Transfer aeroporto", "Suporte local"],
+    owner_name: "Cauã Vicente",
+    rating: 5.0,
+    reviews_count: 3,
+    photos: ["/properties/1018/1.jpeg", "/properties/1018/2.jpeg", "/properties/1018/3.jpeg", "/properties/1018/4.jpeg", "/properties/1018/5.jpeg", "/properties/1018/6.jpeg"]
   }
 ];
