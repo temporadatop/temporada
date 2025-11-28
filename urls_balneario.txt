@@ -1,0 +1,4 @@
+URLs de Balneário Camboriú para adicionar (IDs 48-57):
+
+Vou buscar manualmente 10 URLs de imóveis no Airbnb de Balneário Camboriú.
+Estratégia: Usar busca direta no Airbnb e coletar URLs de casas bem avaliadas.
