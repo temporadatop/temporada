@@ -655,4 +655,36 @@ export const properties: Property[] = [
     reviews_count: 122,
     photos: ["/properties/40/1.jpeg", "/properties/40/2.jpeg", "/properties/40/3.jpeg", "/properties/40/4.jpeg"]
   },
+  {
+    id: 41,
+    name: "Apartamento em Santos",
+    location: "Santos, SP",
+    description: "Apartamento completo em Santos! Self check-in disponível. Ótima localização: hóspedes que ficaram aqui nos últimos 12 meses adoraram a localização. Comunicação excepcional com o anfitrião: hóspedes recentes deram 5 estrelas para Magna pela comunicação.\n\nO apartamento possui 2 quartos, 2 camas, 2 banheiros, cozinha completa e sala de estar. Perfeito para famílias que buscam conforto e boa localização. Anfitriã Magna hospeda há 8 meses. Avaliação perfeita 5.0 estrelas com 10 comentários!",
+    guests: 4,
+    bedrooms: 2,
+    beds: 2,
+    bathrooms: 2,
+    price_per_night: 350,
+    amenities: ["Self check-in", "Ótima localização", "Comunicação 5 estrelas", "Cozinha completa", "2 banheiros", "Confortável", "Próximo praia", "Aconchegante", "Limpo", "Wi-Fi"],
+    owner_name: "Magna",
+    rating: 5.0,
+    reviews_count: 10,
+    photos: ["/properties/41/1.jpeg", "/properties/41/2.jpeg", "/properties/41/3.jpeg", "/properties/41/4.jpeg"]
+  },
+  {
+    id: 42,
+    name: "Experiência Única em Frente ao Mar",
+    location: "São Vicente, SP",
+    description: "Sua experiência única em frente ao mar começa aqui! Top 5% das acomodações do Airbnb. Self check-in com fechadura inteligente. Paz e tranquilidade: os hóspedes dizem que esta acomodação fica em uma região tranquila.\n\nO apartamento possui 1 quarto, 2 camas, 1 banheiro, sala de estar com vista para o mar, cozinha completa e decoração moderna com detalhes amarelos vibrantes. Perfeito para casais ou pequenas famílias. Anfitrião Everson é Superhost com 4 anos hospedando. Avaliação perfeita 5.0 estrelas com 57 comentários!",
+    guests: 4,
+    bedrooms: 1,
+    beds: 2,
+    bathrooms: 1,
+    price_per_night: 280,
+    amenities: ["Top 5% Airbnb", "Superhost", "Frente ao mar", "Self check-in", "Região tranquila", "Vista mar", "Cozinha completa", "Moderno", "4 anos hospedando", "Wi-Fi"],
+    owner_name: "Everson",
+    rating: 5.0,
+    reviews_count: 57,
+    photos: ["/properties/42/1.jpeg", "/properties/42/2.jpeg", "/properties/42/3.jpeg", "/properties/42/4.jpeg"]
+  },
 ];
