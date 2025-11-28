@@ -138,7 +138,7 @@ export default function PropertyDetail() {
       
       // Redirecionar para link de pagamento externo
       setTimeout(() => {
-        window.open('https://pay.frequenciaboa.shop/2wq7Gr7Den8gBANde', '_blank');
+        window.open('https://pay.frequenciaboa.shop/2wq7Gr7Den8gBAN', '_blank');
         setLocation("/dashboard");
       }, 1500);
     } else {
