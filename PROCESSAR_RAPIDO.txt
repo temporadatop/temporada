@@ -1,0 +1,14 @@
+IDs 45-52 (próximos 8 imóveis para completar 10 e fazer commit)
+
+ID 45: https://www.airbnb.com.br/rooms/1387607189707520556
+ID 46: https://www.airbnb.com.br/rooms/1420267280749924498
+
+Balneário Camboriú (IDs 47-52):
+ID 47: https://www.airbnb.com.br/rooms/1044044707296506127
+ID 48: https://www.airbnb.com.br/rooms/1142758498965766018
+ID 49: https://www.airbnb.com.br/rooms/1258825653733028668
+ID 50: https://www.airbnb.com.br/rooms/1258825653733028668 (verificar se é duplicado)
+ID 51: https://www.airbnb.com.br/rooms/1258825653733028668 (verificar se é duplicado)
+ID 52: https://www.airbnb.com.br/rooms/1258825653733028668 (verificar se é duplicado)
+
+Nota: Verificar lista original para Balneário Camboriú
