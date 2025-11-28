@@ -639,4 +639,20 @@ export const properties: Property[] = [
     reviews_count: 30,
     photos: ["/properties/39/1.jpeg", "/properties/39/2.jpeg", "/properties/39/3.jpeg", "/properties/39/4.jpeg"]
   },
+  {
+    id: 40,
+    name: "Apto Novo a 2 Quadras da Praia - 3 Qtos",
+    location: "Santos, SP",
+    description: "Apartamento novo a apenas 2 quadras da praia! Top 10% das acomodações do Airbnb. Um dos poucos lugares na região com piscina. Self check-in disponível.\n\nO apartamento possui 3 quartos, 3 camas, 2 banheiros, sala de estar com ar-condicionado, sala de jantar, varanda com churrasqueira e bancada para reuniões aconchegantes. Perfeito para famílias que buscam conforto e proximidade da praia. Anfitriã Carla Giovana é Superhost com 9 anos hospedando. Avaliação excelente 4.98 estrelas com 122 comentários!",
+    guests: 5,
+    bedrooms: 3,
+    beds: 3,
+    bathrooms: 2,
+    price_per_night: 450,
+    amenities: ["Top 10% Airbnb", "Superhost", "2 quadras da praia", "Piscina", "Self check-in", "Churrasqueira", "Ar-condicionado", "Varanda", "9 anos hospedando", "Wi-Fi"],
+    owner_name: "Carla Giovana",
+    rating: 4.98,
+    reviews_count: 122,
+    photos: ["/properties/40/1.jpeg", "/properties/40/2.jpeg", "/properties/40/3.jpeg", "/properties/40/4.jpeg"]
+  },
 ];
