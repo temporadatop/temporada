@@ -751,4 +751,20 @@ export const properties: Property[] = [
     reviews_count: 255,
     photos: ["/properties/46/1.jpeg", "/properties/46/2.jpeg", "/properties/46/3.jpeg", "/properties/46/4.jpeg"]
   },
+  {
+    id: 47,
+    name: "Aconchegante apartamento com vista mar",
+    location: "Balneário Camboriú, SC",
+    description: "Apartamento aconchegante com vista para o mar em Balneário Camboriú! Classificado como Preferido dos Hóspedes. Localizado em condomínio com piscina e área de lazer completa. Self check-in para sua comodidade. Região com muitas atividades e atrações turísticas. Ideal para famílias e casais que buscam conforto e praticidade.\n\nO apartamento possui 1 quarto, 2 camas, 1 banheiro completo, sala aconchegante, cozinha equipada. Piscina no condomínio. Anfitriã Lucila tem 10 anos de experiência hospedando. Avaliação 4.90 estrelas com 77 comentários! Ambiente perfeito para relaxar e aproveitar a praia.",
+    guests: 4,
+    bedrooms: 1,
+    beds: 2,
+    bathrooms: 1,
+    price_per_night: 280,
+    amenities: ["Piscina", "Self check-in", "Vista para o mar", "Próximo à praia", "Elevador", "Estacionamento", "Wi-Fi", "Ar-condicionado", "TV", "Cozinha"],
+    owner_name: "Lucila",
+    rating: 4.90,
+    reviews_count: 77,
+    photos: ["/properties/47/1.jpeg", "/properties/47/2.jpeg", "/properties/47/3.jpeg", "/properties/47/4.jpeg"]
+  },
 ];
