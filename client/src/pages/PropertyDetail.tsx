@@ -14,6 +14,7 @@ import {
   MapPin, Users, Bed, Bath, Star, Calendar, 
   ArrowLeft, CheckCircle
 } from "lucide-react";
+import CountdownTimer from "@/components/CountdownTimer";
 import { toast } from "sonner";
 import UrgencyTimer from "@/components/UrgencyTimer";
 
@@ -275,6 +276,9 @@ export default function PropertyDetail() {
 
           {/* Sidebar - Card de Reserva */}
           <div className="lg:col-span-1">
+            {/* Contador Promocional */}
+            <CountdownTimer initialMinutes={5} />
+
             <Card className="sticky top-4">
               <CardHeader>
                 <CardTitle className="text-2xl">

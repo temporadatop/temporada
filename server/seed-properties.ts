@@ -176,25 +176,7 @@ const propertiesData = [
     images: JSON.stringify(["/properties/chacara-10-foto-01.jpg", "/properties/chacara-10-foto-02.jpg", "/properties/chacara-10-foto-03.jpg", "/properties/chacara-10-foto-04.jpg"]),
     rules: "Ideal para festas de família. Respeitar capacidade máxima de 15 pessoas.",
     status: "active" as const
-  },
-  {
-    ownerId: 11,
-    title: "Rancho Pedra Alta",
-    description: "O Rancho Pedra Alta é um chalé romântico e exclusivo em São Bento do Sapucaí, conhecido como a 'Suíça Brasileira'. Perfeito para casais que buscam privacidade, conforto e uma experiência única em meio às montanhas. Com hidromassagem privativa, este é o refúgio ideal para momentos a dois.\n\nO chalé conta com quarto confortável, banheiro com hidromassagem, cozinha equipada e sala de estar aconchegante. A decoração rústica-chique cria uma atmosfera romântica e sofisticada. Todos os detalhes foram pensados para proporcionar uma experiência inesquecível.\n\nA área externa oferece vista panorâmica para as montanhas, varanda privativa para apreciar o nascer do sol, e jardim com flores. A hidromassagem é perfeita para relaxar após um dia explorando as belezas naturais da região.\n\nCom localização privilegiada em São Bento do Sapucaí, hidromassagem privativa e atmosfera romântica, o Rancho Pedra Alta é o destino perfeito para casais que buscam uma escapada especial nas montanhas!",
-    address: "Estrada do Vale do Sonho, Km 3",
-    city: "São Bento do Sapucaí",
-    state: "SP",
-    zipCode: "12490-000",
-    capacity: 2,
-    bedrooms: 1,
-    bathrooms: 1,
-    pricePerNight: 48100,
-    amenities: JSON.stringify(["Hidromassagem", "Vista para montanhas", "Varanda privativa", "Chalé romântico", "Cozinha", "Lareira", "Jardim", "Decoração rústica-chique"]),
-    images: JSON.stringify(["/properties/chacara-11-foto-01.jpg", "/properties/chacara-11-foto-02.jpg", "/properties/chacara-11-foto-03.jpg", "/properties/chacara-11-foto-04.jpg"]),
-    rules: "Ideal para casais. Ambiente romântico e exclusivo.",
-    status: "active" as const
-  }
-];
+
 
 async function seedProperties() {
   console.log("🌱 Iniciando seed das propriedades...\n");
