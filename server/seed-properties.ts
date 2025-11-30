@@ -1,5 +1,6 @@
 import { getDb } from "./db";
 import { properties } from "../drizzle/schema";
+import { gt } from "drizzle-orm";
 
 /**
  * Script para popular o banco de dados com as 11 chácaras fictícias
@@ -188,9 +189,13 @@ async function seedProperties() {
   }
 
   try {
+    // Deletar todas as propriedades com ID maior que 11 (para remover as indesejadas)
+    await db.delete(properties).where(gt(properties.ownerId, 11));
+    console.log("✅ Propriedades com ID > 11 removidas com sucesso.");
+
     // Inserir todas as propriedades
     for (const property of propertiesData) {
-      await db.insert(properties).values(property);
+      await db.insert(properties).values(property).onConflictDoNothing();
       console.log(`✅ ${property.title} - ${property.city}/${property.state}`);
     }
 
