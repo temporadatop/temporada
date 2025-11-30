@@ -189,9 +189,9 @@ async function seedProperties() {
   }
 
   try {
-    // Deletar todas as propriedades com ID maior que 11 (para remover as indesejadas)
-    await db.delete(properties).where(gt(properties.ownerId, 11));
-    console.log("✅ Propriedades com ID > 11 removidas com sucesso.");
+    // Deletar todas as propriedades com ID maior que 47 (para remover as indesejadas)
+    await db.delete(properties).where(gt(properties.ownerId, 47));
+    console.log("✅ Propriedades com ID > 47 removidas com sucesso.");
 
     // Inserir todas as propriedades
     for (const property of propertiesData) {
