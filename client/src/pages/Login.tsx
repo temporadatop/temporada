@@ -102,7 +102,7 @@ export default function Login() {
           </div>
         </Link>
 
-        <Tabs defaultValue="login" className="w-full">
+        <Tabs defaultValue="register" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="login">Login</TabsTrigger>
             <TabsTrigger value="register">Cadastro</TabsTrigger>
