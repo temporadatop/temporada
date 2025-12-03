@@ -512,7 +512,7 @@ export const properties: Property[] = [
     photos: ["/properties/31/1.jpeg", "/properties/31/2.jpeg", "/properties/31/3.jpeg", "/properties/31/4.jpeg"]
   },
   {
-    id: 32,2,
+    id: 32,
     name: "Paz em Pitangueiras Beach",
     location: "Guarujá, SP",
     description: "Apartamento completo na Praia das Pitangueiras no Guarujá! Localização privilegiada em região tranquila e segura. Classificado no top 10% das acomodações do Airbnb. Perfeito para famílias que buscam conforto e proximidade da praia.\n\nO apartamento possui 3 quartos, 4 camas, 3 banheiros completos, sala ampla, cozinha equipada e varanda com vista para o mar. Self check-in com auxílio de funcionários do prédio. Anfitriao Caio César tem 4 anos de experiência. Avaliação 4.95 estrelas com 37 comentários. Ambiente tranquilo e acolhedor!",
