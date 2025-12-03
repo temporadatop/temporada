@@ -752,7 +752,7 @@ export const properties: Property[] = [
     photos: ["/properties/46/1.jpeg", "/properties/46/2.jpeg", "/properties/46/3.jpeg", "/properties/46/4.jpeg"]
   },
   {
-    id: 1000,
+    id: 10000,
     name: "Lindo apto frente mar! no coração de BC.",
     location: "Balneário Camboriú, SC",
     description: "Maravilhoso apto no coração de BC com vista de todos os quartos. Apartamento reformado recentemente para receber você com muito carinho no coração de Balneário. Possui 3 camas de casal e 2 de solteiro! Split em todos os quartos. O prédio possui jardim beira mar ótimo para um fim de tarde! Vidros com isolamento acústico, aquecimento da água para o banho a gás! Acesso à praia compartilhado — à beira-mar com vista para o pátio. Wi-Fi disponível. Estacionamento gratuito em garagem na propriedade: 1 vaga. TV de 55 polegadas com Netflix e HBO Max. Cozinha completa. Espaço de trabalho exclusivo. Permitido animais. Elevador no prédio.",
@@ -765,6 +765,22 @@ export const properties: Property[] = [
     owner_name: "Tatiana",
     rating: 4.95,
     reviews_count: 41,
-    photos: ["/properties/1000/1.jpeg", "/properties/1000/2.jpeg", "/properties/1000/3.jpeg", "/properties/1000/4.jpeg", "/properties/1000/5.jpeg", "/properties/1000/6.jpeg", "/properties/1000/7.jpeg", "/properties/1000/8.jpeg", "/properties/1000/9.jpeg", "/properties/1000/10.jpeg"]
+    photos: ["/properties/10000/1.jpeg", "/properties/10000/2.jpeg", "/properties/10000/3.jpeg", "/properties/10000/4.jpeg", "/properties/10000/5.jpeg", "/properties/10000/6.jpeg", "/properties/10000/7.jpeg", "/properties/10000/8.jpeg", "/properties/10000/9.jpeg", "/properties/10000/10.jpeg"]
+  },
+  {
+    id: 10001,
+    name: "BC! Quadra mar! Pé na areia! Av. Atlântica!",
+    location: "Balneário Camboriú, SC",
+    description: "Espaço inteiro: apartamento em Balneário Camboriú, Brasil. Apartamento com excelente localização, quadra de mar, pé na areia na Avenida Atlântica! Localizado em frente à Ilha das Cabras, esta acomodação é muito bem classificada com base em avaliações, comentários e confiabilidade. No top 10% das acomodações. Preferido dos hóspedes. Anfitriã Iara é Superhost com 7 anos hospedando. Avaliação 4,98 estrelas com 45 comentários! Achado! Este espaço costuma estar sempre reservado. Cancelamento gratuito antes de 25 de março. Sofá-cama, TV, Ar-condicionado, Aquecimento. Cozinha completa. Área de jantar. Quarto. Banheiro completo. Área de lavanderia. Exterior com vista para o mar.",
+    guests: 15,
+    bedrooms: 1,
+    beds: 2,
+    bathrooms: 1,
+    price_per_night: 308.67,
+    amenities: ["Sofá-cama", "TV", "Ar-condicionado", "Aquecimento", "Cozinha completa", "Área de jantar", "Banheiro completo", "Área de lavanderia", "Exterior", "Vista para o mar", "Frente à Ilha das Cabras", "Na praia", "Superhost", "Preferido dos hóspedes", "Top 10% das acomodações", "Cancelamento gratuito"],
+    owner_name: "Iara",
+    rating: 4.98,
+    reviews_count: 45,
+    photos: ["/properties/10001/1.jpeg", "/properties/10001/2.jpeg", "/properties/10001/3.jpeg", "/properties/10001/4.jpeg", "/properties/10001/5.jpeg", "/properties/10001/6.jpeg", "/properties/10001/7.jpeg", "/properties/10001/8.jpeg", "/properties/10001/9.jpeg", "/properties/10001/10.jpeg", "/properties/10001/11.jpeg", "/properties/10001/12.jpeg", "/properties/10001/13.jpeg", "/properties/10001/14.jpeg", "/properties/10001/15.jpeg", "/properties/10001/16.jpeg", "/properties/10001/17.jpeg", "/properties/10001/18.jpeg"]
   }
 ];
