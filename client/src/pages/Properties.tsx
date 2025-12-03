@@ -191,7 +191,12 @@ export default function Properties() {
                     e.currentTarget.src = "https://placehold.co/400x300/FF7A00/FFFFFF?text=Imóvel";
                   }}
                 />
-                {/* Badge para chácaras dinâmicas (ID >= 1000) - REMOVIDO */}
+                {/* Badge para propriedades campeões de praia (ID 10000 e 10001) */}
+                {(property.id === 10000 || property.id === 10001) && (
+                  <div className="absolute top-2 md:top-3 left-2 md:left-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-2 md:px-3 py-1 md:py-1.5 rounded-full text-xs md:text-sm font-semibold shadow-lg">
+                    Imóvel campeão praia #praiou #nosvaidescer
+                  </div>
+                )}
               </div>
               <CardHeader>
                 <CardTitle className="text-lg">{property.name}</CardTitle>
