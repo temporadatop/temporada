@@ -88,7 +88,7 @@ export default function PropertyDetail() {
     }
 
     let totalPrice = calculateTotalPrice();
-    const depositAmount = 79.90; // Taxa única de reserva
+    const depositAmount = 39.90; // Taxa única de reserva - Promoção Fim de Ano 50% OFF
     
     // Verificar e aplicar cupom automaticamente
     let originalPrice: number | undefined;
@@ -136,7 +136,7 @@ export default function PropertyDetail() {
   };
 
   const totalPrice = calculateTotalPrice();
-  const depositAmount = 79.90; // Taxa única de reserva
+  const depositAmount = 39.90; // Taxa única de reserva - Promoção Fim de Ano 50% OFF
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -350,11 +350,11 @@ export default function PropertyDetail() {
                         <span className="text-orange-600">{formatPrice(depositAmount)}</span>
                       </div>
                       <p className="text-xs font-bold text-orange-600 mt-1">
-                        (Único valor a pagar no momento)
+                        (Único valor a pagar no momento - Promoção Fim de Ano)
                       </p>
                       <div className="mt-2 space-y-1">
                         <p className="text-xs text-gray-600">
-                          * A taxa de reserva será devolvida no dia da reserva
+                          * A taxa de reserva será devolvida no dia da reserva (Valor original R$ 79,90)
                         </p>
                         <p className="text-xs text-gray-600">
                           * Este é o único valor a pagar para garantir a sua reserva
@@ -369,7 +369,12 @@ export default function PropertyDetail() {
                   onClick={handleReservation}
                   disabled={!checkIn || !checkOut}
                 >
-                  {isAuthenticated ? "Reservar por apenas R$ 79,90" : "Fazer Login para Reservar"}
+                  {isAuthenticated ? (
+	                    <span className="flex flex-col items-center">
+	                      <span className="line-through text-base font-normal">R$ 79,90</span>
+	                      <span className="text-xl font-bold">Reservar por R$ 39,90 (50% OFF)</span>
+	                    </span>
+	                  ) : "Fazer Login para Reservar"}
                 </Button>
 
                 {!isAuthenticated && (
