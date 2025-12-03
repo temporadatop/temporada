@@ -750,5 +750,21 @@ export const properties: Property[] = [
     rating: 4.82,
     reviews_count: 255,
     photos: ["/properties/46/1.jpeg", "/properties/46/2.jpeg", "/properties/46/3.jpeg", "/properties/46/4.jpeg"]
+  },
+  {
+    id: 1000,
+    name: "Lindo apto frente mar! no coração de BC.",
+    location: "Balneário Camboriú, SC",
+    description: "Maravilhoso apto no coração de BC com vista de todos os quartos. Apartamento reformado recentemente para receber você com muito carinho no coração de Balneário. Possui 3 camas de casal e 2 de solteiro! Split em todos os quartos. O prédio possui jardim beira mar ótimo para um fim de tarde! Vidros com isolamento acústico, aquecimento da água para o banho a gás! Acesso à praia compartilhado — à beira-mar com vista para o pátio. Wi-Fi disponível. Estacionamento gratuito em garagem na propriedade: 1 vaga. TV de 55 polegadas com Netflix e HBO Max. Cozinha completa. Espaço de trabalho exclusivo. Permitido animais. Elevador no prédio.",
+    guests: 15,
+    bedrooms: 4,
+    beds: 5,
+    bathrooms: 3,
+    price_per_night: 1102.67,
+    amenities: ["Vista para o pátio", "Acesso à praia compartilhado", "À beira-mar", "Wi-Fi", "Estacionamento gratuito em garagem", "1 vaga de garagem", "TV 55 polegadas", "Netflix", "HBO Max", "Vista para o jardim", "Cozinha completa", "Espaço de trabalho exclusivo", "Permitido animais", "Elevador", "Aquecimento de água a gás", "Isolamento acústico", "Split em todos os quartos", "Reformado recentemente"],
+    owner_name: "Tatiana",
+    rating: 4.95,
+    reviews_count: 41,
+    photos: ["/properties/1000/1.jpeg", "/properties/1000/2.jpeg", "/properties/1000/3.jpeg", "/properties/1000/4.jpeg", "/properties/1000/5.jpeg", "/properties/1000/6.jpeg", "/properties/1000/7.jpeg", "/properties/1000/8.jpeg", "/properties/1000/9.jpeg", "/properties/1000/10.jpeg"]
   }
 ];
