@@ -31,21 +31,9 @@ export default function PropertyDetail() {
   const propertyId = parseInt(id || "0");
   let property: Property | undefined;
   
-  if (propertyId >= 1000) {
-    // Chácara dinâmica
-    const dynamicIndex = propertyId - 1000;
-    const dynamicProp = dynamicProperties[dynamicIndex];
-    if (dynamicProp) {
-      property = {
-        ...dynamicProp,
-        id: propertyId,
-        location: city ? `${city}, SP` : "São Paulo, SP",
-      };
-    }
-  } else {
-    // Chácara fixa
-    property = properties.find(p => p.id === propertyId);
-  }
+  // Buscar em propriedades fixas ou dinâmicas
+  const allProperties = [...properties, ...dynamicProperties.map((p, i) => ({ ...p, id: 1000 + i, location: city ? `${city}, SP` : "São Paulo, SP" }))];
+  property = allProperties.find(p => p.id === propertyId);
 
   if (!property) {
     return (
