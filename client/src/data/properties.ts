@@ -911,20 +911,4 @@ export const properties: Property[] = [
     reviews_count: 167,
     photos: ["/properties/56/1.jpg", "/properties/56/2.jpg", "/properties/56/3.jpg", "/properties/56/4.jpg"]
   },
-  {
-    id: 57,
-    name: "Casa Contemporânea com Deck e Vista",
-    location: "Balneário Camboriú, SC",
-    description: "Casa contemporânea com deck amplo e vista espetacular! Arquitetura moderna com muito vidro e integração com a natureza. Localizada em área nobre e tranquila. Ideal para quem busca sofisticação e conforto.\n\nA casa oferece 3 quartos (2 suítes), 6 camas, 2 banheiros, sala de estar com pé direito alto, cozinha integrada, área gourmet. Deck de madeira com vista panorâmica, churrasqueira, jardim paisagístico e garagem para 2 carros. Mobiliário de design.",
-    guests: 8,
-    bedrooms: 3,
-    beds: 6,
-    bathrooms: 2,
-    price_per_night: 850,
-    amenities: ["Vista panorâmica", "Deck amplo", "Churrasqueira", "Área gourmet", "Jardim paisagístico", "Pé direito alto", "Design moderno", "Ar-condicionado", "Garagem", "Wi-Fi"],
-    owner_name: "Camila Rodrigues",
-    rating: 4.96,
-    reviews_count: 201,
-    photos: ["/properties/57/1.jpg", "/properties/57/2.jpg", "/properties/57/3.jpg", "/properties/57/4.jpg"]
-  },
 ];
