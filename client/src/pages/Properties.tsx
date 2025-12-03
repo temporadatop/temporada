@@ -191,12 +191,7 @@ export default function Properties() {
                     e.currentTarget.src = "https://placehold.co/400x300/FF7A00/FFFFFF?text=Imóvel";
                   }}
                 />
-                {/* Badge para chácaras dinâmicas (ID >= 1000) */}
-                {property.id >= 1000 && (
-                  <div className="absolute top-2 md:top-3 left-2 md:left-3 bg-gradient-to-r from-orange-500 to-pink-500 text-white px-2 md:px-3 py-1 md:py-1.5 rounded-full text-xs md:text-sm font-semibold shadow-lg">
-                    🏡 Chácara até 10km de você
-                  </div>
-                )}
+                {/* Badge para chácaras dinâmicas (ID >= 1000) - REMOVIDO */}
               </div>
               <CardHeader>
                 <CardTitle className="text-lg">{property.name}</CardTitle>
