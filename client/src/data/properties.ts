@@ -749,6 +749,6 @@ export const properties: Property[] = [
     owner_name: "Filipe",
     rating: 4.82,
     reviews_count: 255,
-    photos: ["/properties/46/1.jpeg", "/properties/46/2.jpeg", "/properties/46/3.jpeg", "/properties/46"4.jpeg"]
+    photos: ["/properties/46/1.jpeg", "/properties/46/2.jpeg", "/properties/46/3.jpeg", "/properties/46/4.jpeg"]
   }
 ];
