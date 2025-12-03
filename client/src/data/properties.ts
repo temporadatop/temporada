@@ -509,7 +509,7 @@ export const properties: Property[] = [
     owner_name: "Natascha Marques",
     rating: 5.0,
     reviews_count: 1,
-    photos: ["/properties/31/1.jpeg", "/properties/31/2.jpeg", "/properties/31/3.jpeg", "/properties/31"4"4.jpeg"]
+    photos: ["/properties/31/1.jpeg", "/properties/31/2.jpeg", "/properties/31/3.jpeg", "/properties/31/4.jpeg"]
   },
   {
     id: 32,2,
