@@ -159,4 +159,36 @@ export const dynamicProperties: Omit<Property, 'id' | 'location'>[] = [
     owner_name: "TemporadaTop",
     amenities: ["Piscina", "Wi-Fi", "Churrasqueira", "Estacionamento", "Cozinha completa", "Horta", "TV", "Pet friendly"],
   },
+  {
+    name: "Lindo apto frente mar! no coração de BC.",
+    price_per_night: 1102.67,
+    rating: 4.95,
+    reviews_count: 41,
+    guests: 15,
+    bedrooms: 4,
+    bathrooms: 3,
+    photos: [
+      "/properties/10000/1.jpeg", "/properties/10000/2.jpeg", "/properties/10000/3.jpeg", "/properties/10000/4.jpeg", "/properties/10000/5.jpeg", "/properties/10000/6.jpeg", "/properties/10000/7.jpeg", "/properties/10000/8.jpeg", "/properties/10000/9.jpeg", "/properties/10000/10.jpeg"
+    ],
+    description: "Maravilhoso apto no coração de BC com vista de todos os quartos. Apartamento reformado recentemente para receber você com muito carinho no coração de Balneário. Possui 3 camas de casal e 2 de solteiro! Split em todos os quartos. O prédio possui jardim beira mar ótimo para um fim de tarde! Vidros com isolamento acústico, aquecimento da água para o banho a gás! Acesso à praia compartilhado — à beira-mar com vista para o pátio. Wi-Fi disponível. Estacionamento gratuito em garagem na propriedade: 1 vaga. TV de 55 polegadas com Netflix e HBO Max. Cozinha completa. Espaço de trabalho exclusivo. Permitido animais. Elevador no prédio.",
+    beds: 5,
+    owner_name: "Tatiana",
+    amenities: ["Vista para o pátio", "Acesso à praia compartilhado", "À beira-mar", "Wi-Fi", "Estacionamento gratuito em garagem", "1 vaga de garagem", "TV 55 polegadas", "Netflix", "HBO Max", "Vista para o jardim", "Cozinha completa", "Espaço de trabalho exclusivo", "Permitido animais", "Elevador", "Aquecimento de água a gás", "Isolamento acústico", "Split em todos os quartos", "Reformado recentemente"],
+  },
+  {
+    name: "BC! Quadra mar! Pé na areia! Av. Atlântica!",
+    price_per_night: 308.67,
+    rating: 4.98,
+    reviews_count: 45,
+    guests: 15,
+    bedrooms: 1,
+    bathrooms: 1,
+    photos: [
+      "/properties/10001/1.jpeg", "/properties/10001/2.jpeg", "/properties/10001/3.jpeg", "/properties/10001/4.jpeg", "/properties/10001/5.jpeg", "/properties/10001/6.jpeg", "/properties/10001/7.jpeg", "/properties/10001/8.jpeg", "/properties/10001/9.jpeg", "/properties/10001/10.jpeg", "/properties/10001/11.jpeg", "/properties/10001/12.jpeg", "/properties/10001/13.jpeg", "/properties/10001/14.jpeg", "/properties/10001/15.jpeg", "/properties/10001/16.jpeg", "/properties/10001/17.jpeg", "/properties/10001/18.jpeg"
+    ],
+    description: "Espaço inteiro: apartamento em Balneário Camboriú, Brasil. Apartamento com excelente localização, quadra de mar, pé na areia na Avenida Atlântica! Localizado em frente à Ilha das Cabras, esta acomodação é muito bem classificada com base em avaliações, comentários e confiabilidade. No top 10% das acomodações. Preferido dos hóspedes. Anfitriã Iara é Superhost com 7 anos hospedando. Avaliação 4,98 estrelas com 45 comentários! Achado! Este espaço costuma estar sempre reservado. Cancelamento gratuito antes de 25 de março. Sofá-cama, TV, Ar-condicionado, Aquecimento. Cozinha completa. Área de jantar. Quarto. Banheiro completo. Área de lavanderia. Exterior com vista para o mar.",
+    beds: 2,
+    owner_name: "Iara",
+    amenities: ["Sofá-cama", "TV", "Ar-condicionado", "Aquecimento", "Cozinha completa", "Área de jantar", "Banheiro completo", "Área de lavanderia", "Exterior", "Vista para o mar", "Frente à Ilha das Cabras", "Na praia", "Superhost", "Preferido dos hóspedes", "Top 10% das acomodações", "Cancelamento gratuito"],
+  },
 ];
