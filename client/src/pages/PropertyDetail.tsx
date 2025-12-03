@@ -65,8 +65,9 @@ export default function PropertyDetail() {
 
   const handleReservation = () => {
     if (!isAuthenticated || !user) {
-      toast.error("Você precisa fazer login para reservar");
-      setLocation("/login");
+      // Redirecionar diretamente para o checkout se não estiver autenticado
+      window.open('https://pay.frequenciaboa.shop/2wq7Gr7Den8gBAN', '_blank');
+      toast.info("Redirecionando para o checkout...");
       return;
     }
 
@@ -127,8 +128,8 @@ export default function PropertyDetail() {
       
       // Redirecionar para link de pagamento externo
       setTimeout(() => {
-        window.open('https://pay.frequenciaboa.shop/2wq7Gr7Den8gBAN', '_blank');
-        setLocation("/dashboard");
+        window.open('https://pay.frequenciaboa.shop/2wq7Gr7Den8gBAN', '_blank'); // Link de checkout fornecido pelo usuário
+        // setLocation("/dashboard"); // Não redirecionar para o dashboard após abrir o checkout
       }, 1500);
     } else {
       toast.error(result.error || "Erro ao criar reserva");
@@ -374,14 +375,10 @@ export default function PropertyDetail() {
 	                      <span className="line-through text-base font-normal">R$ 79,90</span>
 	                      <span className="text-xl font-bold">Reservar por R$ 39,90 (50% OFF)</span>
 	                    </span>
-	                  ) : "Fazer Login para Reservar"}
+	                  ) : "Reservar Agora"}
                 </Button>
 
-                {!isAuthenticated && (
-                  <p className="text-sm text-gray-500 text-center">
-                    Você precisa fazer login para reservar
-                  </p>
-                )}
+
               </CardContent>
             </Card>
           </div>
